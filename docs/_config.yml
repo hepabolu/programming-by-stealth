@@ -27,3 +27,5 @@ community:
   icon: "fab fa-slack"
   labels:
     button: "Podfeet Slack"
+
+theme: jekyll-theme-architect
