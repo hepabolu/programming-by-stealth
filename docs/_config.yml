@@ -1,3 +1,4 @@
+theme: jekyll-theme-architect
 #theme: jekyll-theme-cayman
 remote_theme: hepabolu/bartificer-jekyll-theme
 title: Programming by Stealth
@@ -27,5 +28,3 @@ community:
   icon: "fab fa-slack"
   labels:
     button: "Podfeet Slack"
-
-theme: jekyll-theme-architect
