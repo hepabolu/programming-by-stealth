@@ -60,7 +60,7 @@ HTML tags can specify CSS declarations to be applied to themselves using the `st
 The following example shows a `style` attribute on an image tag used to force the border to always be zero pixels, regardless of what is specified in any applicable external or internal style sheets:
 
 ```html
-<img src="img.jpg", alt="an image" style="border-width: 0px;" />
+<img src="img.jpg" alt="an image" style="border-width: 0px;" />
 ```
 
 ## Basic CSS Syntax
@@ -130,29 +130,29 @@ The CSS property for specifying text colour is simply `color` (spelled the Ameri
 
 <dt>RGB (Red, Green, Blue)</dt>
 
-<dd>The RGB components can be given as three decimal values between 0 and 255 using the following format:
+<dd>The RGB components can be given as three decimal values between 0 and 255 using the following format:</dd>
 
-```
+<code>
 rgb(RED_VALUE, GREEN_VALUE, BLUE_VALUE)
-```
+</code>
 
-For example, pure red would be `rgb(255, 0, 0)`.</dd>
+For example, pure red would be <code>rgb(255, 0, 0)</code>.
 
 <dt>RGB with Alpha (Opacity) AKA RGBA</dt>
 
-<dd>An RGBA colour is basically the same as an RGB colour, but with a fourth parameter, the opacity, which should be a value between 0 and 1 where <code>0</code> is fully transparent, and <code>1</code> is fully opaque. RGBA values are specified as follows:
+<dd>An RGBA colour is basically the same as an RGB colour, but with a fourth parameter, the opacity, which should be a value between 0 and 1 where <code>0</code> is fully transparent, and <code>1</code> is fully opaque. RGBA values are specified as follows:</dd>
 
-```
+```css
 rgba(RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE)
 ```
 
-For example, semitransparent pure red would be `rgba(255, 0, 0, 0.5)`.</dd>
+For example, semitransparent pure red would be <code>rgba(255, 0, 0, 0.5)</code>.
 
 <dt>HSL (Hue Saturation & Lightness)</dt>
 
 <dd>Modern browsers also support the HSL colour representation – like RGB this involves three parameters, but in this case the first parameter is the hue, given as a value between 0 and 360, representing the position of the colour on the colour wheel in degrees. The second parameter is the saturation, given as a percentage, and the third is a lightness, also given as a percentage. The format for specifying an HSL colour is as follows:</dd>
 
-```
+```css
 hsl(HUE_IN_DEGREES, SATURATION_VALUE%, LIGHTNESS_VALUE)
 ```
 
@@ -160,7 +160,7 @@ hsl(HUE_IN_DEGREES, SATURATION_VALUE%, LIGHTNESS_VALUE)
 
 <dd>The same as a HSL value, but with an opacity parameter added, again, represented as a value between 0 and 1, like with RGBA. The format is as follows:</dd>
 
-```
+```css
 hsla(HUE_IN_DEGREES, SATURATION_VALUE%, LIGHTNESS_VALUE, ALPHA_VALUE)
 ```
 </dl>
