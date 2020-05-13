@@ -50,7 +50,7 @@ Finally, even before HTML 5, there were two generic tags for grouping content �
 
 ## Sizing Boxes
 
-Before we move on to positioning boxes, it’s worth noting that we can control the size of the box for each tag with CSS. The `width` and `height` properties specify the dimensions of the content region of a box. The default value is `auto`, which means the box will expand and contract based on it’s content, and the type of box that it is. The boxes for inline tags will be as tall and wide as their content, while the boxes for regular block-level tags will be the full width of the containing box, and the height of their content. Widths and heights can be set to specific values using any of the CSS dimensions (e.g. `500px`, or `4em`), or to a percentage of the width or height of the containing box.
+Before we move on to positioning boxes, it’s worth noting that we can control the size of the box for each tag with CSS. The `width` and `height` properties specify the dimensions of the content region of a box. The default value is `auto`, which means the box will expand and contract based on its content, and the type of box that it is. The boxes for inline tags will be as tall and wide as their content, while the boxes for regular block-level tags will be the full width of the containing box, and the height of their content. Widths and heights can be set to specific values using any of the CSS dimensions (e.g. `500px`, or `4em`), or to a percentage of the width or height of the containing box.
 
 As well as specifying exact sizes, it is also possible to leave the width and/or height set to `auto`, and constrain the size of the box within a range using the `min-width`, `max-width`, `min-height`, and `max-height` properties.
 
@@ -58,7 +58,7 @@ Finally, for block-level elements with a `width` other than `auto`, it’s possi
 
 You can see an example of this approach in the demo at the bottom of this instalment. The `<figure>` tag is given a width of `75%`, a padding of `5px`, a top and bottom margin of `10px`, and a left an right margin of `auto`:
 
-```CSS
+```css
 figure{
   text-align: center;
   width: 75%;
@@ -154,7 +154,7 @@ The attributes that control the position of boxes with a position of fixed are `
 
 For example, to position a `<div>` with the ID `top_banner` as a 10-pixel high banner across the whole top of the screen you would set:
 
-```CSS
+```css
 div#top_banner{
   position: fixed;
   top: 0px;
@@ -314,7 +314,7 @@ All Content by Bart Busschots - released under CC-NC-By License
 </html>
 ```
 
-```CSS
+```css
 /*
 Styles for PBS7 Demo
 */

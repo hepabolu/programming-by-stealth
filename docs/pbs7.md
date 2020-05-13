@@ -20,7 +20,7 @@ Solving this problem is what advanced CSS selectors are all about. There are man
 
 Imagine this scenario – in your main document, you are happy to have emphasised text rendered in the default way, that is to say, in italics. You also like having block quotes rendered in italics, so you have added the style definition in your sheet:
 
-```CSS
+```css
 blockquote{
   font-style: italic;
 }
@@ -30,7 +30,7 @@ You now include a quotation that contains emphasised text – that emphasis will
 
 This is where the CSS containment selector comes into play. To specify that a style should only be applied to a tag if it is contained within another tag, the selector is simply the name of the containing tag followed by a space, followed by the contained tag. So, in our example, we could make emphasised text within block quotes dark grey with the style definition:
 
-```CSS
+```css
 blockquote em{
   color: DarkGrey;
 }
@@ -57,7 +57,7 @@ To specify a class name in a CSS selector, the syntax is the name of the class p
 
 So, to specify that all tags with the class `vip` should be rendered in dark red, you could use the following style definition:
 
-```CSS
+```css
 .vip{
   color: DarkRed;
 }
@@ -65,7 +65,7 @@ So, to specify that all tags with the class `vip` should be rendered in dark red
 
 To specify a style for only a particular tag of a particular class, specify the tag name followed by a dot followed by the class name. So, for example, to make top-level headings with the class vip bright red, you could use the following style definition:
 
-```CSS
+```css
 h1.vip{
   color: Red;
 }
@@ -87,7 +87,7 @@ Like a class name, IDs are names of your own invention, but they do have to adhe
 
 The CSS selector for an ID is the `#` symbol followed by the ID. So to make any tag with the ID `intro_text` blue, you would use a style definition something like:
 
-```CSS
+```css
 #intro_text{
   color: blue;
 }
@@ -95,7 +95,7 @@ The CSS selector for an ID is the `#` symbol followed by the ID. So to make any 
 
 You can also combine a tag name with an ID so the style is only applied if the tag with a given ID is of a given type. For example, to make a paragraph with an ID of `intro_text` blue you would use a style definition something like:
 
-```CSS
+```css
 p#intro_text{
   color: blue;
 }
@@ -173,7 +173,7 @@ The margin is controlled by four CSS properties, `margin-top`, `margin-right`, `
 
 Because it’s often desirable to set all four margins at once, CSS provides the `margin` shorthand property. It expects either one, two, or four dimensions separated by spaces. When one dimension is specified, that dimension is applied to all four margin properties. When two dimensions are specified the first is applied to the top and bottom margins, and the second to the left and right. Finally, when four properties are provided, they are interpreted as the top, right, bottom, and left values – in that order.
 
-```CSS
+```css
 /* Short version */
 margin: 5px;
 /* Is identical to */
@@ -213,13 +213,13 @@ There are a number of shorthand properties to make setting borders easier. All f
 
 So, to set all four borders to the same, use something like:
 
-```CSS
+```css
 border: 2px solid blue;
 ```
 
 If you want three of the borders to be the same, you can first use the border shorthand property, then one of the sides, e.g. to set all but the borders but the bottom one you could use something like:
 
-```CSS
+```css
 border: 1px dashed red;
 border-bottom: 0px;
 ```
@@ -228,7 +228,7 @@ CSS 3 finally introduced an officially supported way of rounding borders. Indivi
 
 You could add a quite subtle rounding to the borders with something like:
 
-```CSS
+```css
 border-radius: 5px;
 ```
 
@@ -308,7 +308,7 @@ print $q->redirect(
 </html>
 ```
 
-```CSS
+```css
 /*
 Styles for PBS7 Demo
 */
@@ -407,7 +407,7 @@ For today, what we want is the web inspector (`Tools`, `Web Developer`, `Inspect
 
 ![FireFox Developer Tools Web Inspector](../assets/pbs7/Screen-Shot-2016-01-19-at-17.02.56-e1453223192795.png)
 
-This will add new interface to the bottom of the browser window with two panes – one showing the HTML tags in the document, and one showing info about the currently selected tag. To see a tag’s box, just hover over it in the right pane. To see its properties, click on it. In the left pane, where the properties are shown, there are tabs to control what properties you see. The two that are of interest to use at the moment are Rules, which show all the CSS definitions in our stylesheets that apply to the selected tag, and Computed, which shows the rules that have been applied to the tag when all the cascading of styles and calculations of specificity have been done.
+This will add a new interface to the bottom of the browser window with two panes – one showing the HTML tags in the document, and one showing info about the currently selected tag. To see a tag’s box, just hover over it in the right pane. To see its properties, click on it. In the left pane, where the properties are shown, there are tabs to control what properties you see. The two that are of interest to us at the moment are Rules, which show all the CSS definitions in our stylesheets that apply to the selected tag, and Computed, which shows the rules that have been applied to the tag when all the cascading of styles and calculations of specificity have been done.
 
 ![FireFox Web Inspector](../assets/pbs7/Screen-Shot-2016-01-19-at-17.11.42-e1453223585271.png)
 
