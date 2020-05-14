@@ -12,7 +12,7 @@ You can also <a href="http://media.blubrry.com/nosillacast/traffic.libsyn.com/no
 
 ## Styling Lists
 
-Back in [the third instalment](https://www.bartbusschots.ie/s/2015/11/05/programming-by-stealth-part-3-of-x-html-block-elements/) we learned about three kinds of list in HTML: ordered lists, unordered lists, and definition lists. We’ll now revisit the first two of these from a CSS point of view, looking at some CSS properties that can be used to alter the appearance of ordered and unordered lists.
+Back in [the third instalment](https://pbs.bartificer.net/pbs3) we learned about three kinds of list in HTML: ordered lists, unordered lists, and definition lists. We’ll now revisit the first two of these from a CSS point of view, looking at some CSS properties that can be used to alter the appearance of ordered and unordered lists.
 
 The HTML for lists creates an outer box, the `<ol>` or `<ul>` tag, containing a series of inner boxes, the `<li>` tags. By default, the `<ol>` and `<ul>` tags have a wide left-padding. By default, the bullets or numbers are placed outside the content region of the the `<li>` tags, and hence, over the wide left padding of the list they are contained within.
 

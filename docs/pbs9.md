@@ -1,6 +1,6 @@
 # PBS 9 of X – More CSS Positioning
 
-In [the previous instalment](https://www.bartbusschots.ie/s/2016/02/03/programming-by-stealth-8-of-x-css-positioning/) we learned how to group multiple HTML tags together to define regions within a page, and then how to move those regions around by floating them, or positioning them explicitly. We’ll start this instalment with a little revision – there was a lot to digest last time! While revisiting the layout from last time, we’ll also look at some of its limitations. Then we’ll move on to look at the CSS `display` property, how it can be used to alter layouts, and, how we can use it to improve on our demo layout.
+In [the previous instalment](https://pbs.bartificer.net/pbs8) we learned how to group multiple HTML tags together to define regions within a page, and then how to move those regions around by floating them, or positioning them explicitly. We’ll start this instalment with a little revision – there was a lot to digest last time! While revisiting the layout from last time, we’ll also look at some of its limitations. Then we’ll move on to look at the CSS `display` property, how it can be used to alter layouts, and, how we can use it to improve on our demo layout.
 
 ## Matching Podcast Episode 426
 
