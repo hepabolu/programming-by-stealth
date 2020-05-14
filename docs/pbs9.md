@@ -12,7 +12,7 @@ You can also <a href="http://media.blubrry.com/nosillacast/traffic.libsyn.com/no
 
 ## A Little Revision
 
-Because there was a lot of absorb last time, I thought it would be a good idea to revist the concepts from last time in a more practical way. To that end I’ve created a little web app for demonstrating CSS positioning. You can download the code [here](https://www.bartbusschots.ie/s/wp-content/uploads/2016/02/pbs8-PositioningPlayground.zip) or [here on GitHub](https://cdn.jsdelivr.net/gh/bbusschots/pbs-resources/instalmentZips/pbs8-PositioningPlayground.zip) and run it on your own local server, or you can run the tool from my web server [here](https://www.bartbusschots.ie/pbsdemos/pbs8-PositioningPlayground/).
+Because there was a lot to absorb last time, I thought it would be a good idea to revisit the concepts from last time in a more practical way. To that end I’ve created a little web app for demonstrating CSS positioning. You can download the code [here](https://www.bartbusschots.ie/s/wp-content/uploads/2016/02/pbs8-PositioningPlayground.zip) or [here on GitHub](https://cdn.jsdelivr.net/gh/bbusschots/pbs-resources/instalmentZips/pbs8-PositioningPlayground.zip) and run it on your own local server, or you can run the tool from my web server [here](https://www.bartbusschots.ie/pbsdemos/pbs8-PositioningPlayground/).
 
 You can use the tool to experiment with the different CSS properties we worked with last time. There are instructions included to recreate the two-column layout from the demo at the end of the last instalment.
 
