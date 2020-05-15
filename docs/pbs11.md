@@ -236,11 +236,11 @@ The `white-space` property controls how the browser will treat white space withi
 
 <dt><code>nowrap</code></dt>
 
-<dd>Multiple consecutive white space characters are collapsed, but lines only break on <code>&ltbr /&gt</code> tags.</dd>
+<dd>Multiple consecutive white space characters are collapsed, but lines only break on <code><br /></code> tags.</dd>
 
 <dt><code>pre</code></dt>
 
-<dd>All white space is preserved (not collapsed), including newline characters. Lines only break on newline characters (i.e. behave like a <code>&ltpre&gt</code> tag).</dd>
+<dd>All white space is preserved (not collapsed), including newline characters. Lines only break on newline characters (i.e. behave like a <code><pre></code> tag).</dd>
 
 <dt><code>pre-wrap</code></dt>
 
