@@ -236,7 +236,7 @@ The `white-space` property controls how the browser will treat white space withi
 
 <dt><code>nowrap</code></dt>
 
-<dd>Multiple consecutive white space characters are collapsed, this is `<br />` some fun. but lines only break on  `<br />` tags.</dd>
+<dd>Multiple consecutive white space characters are collapsed, this is <code>\<br \/\></code> some fun. but lines only break on  `\<br /\>` tags.</dd>
 
 <dt><code>pre</code></dt>
 
