@@ -230,6 +230,23 @@ Next, we may want to force the content of the cell to always stay on one line. U
 The `white-space` property controls how the browser will treat white space within a tag. Below is a list of the most commonly used values for this property:
 
 <dl>
+<dt>Example 1</dt>
+<dd> some stuff with inline code & backticks: `this is code` and this is html `<p>`. end of item.</dd>
+<dt>Example 2</dt>
+<dd> some stuff with inline code & HTML: <code>this is code</code> and this is html <code><p></code>. end of item.</dd>
+<dt>Example 3</dt>
+<dd> some stuff with inline code & backticks & escapes: `this is code` and this is html `\<p\>`. end of item.</dd>
+<dt>Example 4</dt>
+<dd> some stuff with inline code & HTML & escapes: <code>this is code</code> and this is html <code>\<p\></code>. end of item.</dd>
+<dt>Example 5</dt>
+<dd> some stuff with inline code & HTML & escapes (start the line with the escape char): <code>this is code</code> and this is html <code>
+\<p></code>. end of item.</dd>
+<dt>Example 6</dt>
+<dd> some stuff with inline code & backtics & escapes (start the line with the escape char): `this is code` and this is html `
+\<p>`. end of item.</dd>
+</dl>
+
+<dl>
 <dt><code>normal</code></dt>
 
 <dd>Multiple consecutive white space characters (space, tab, newline etc.) are collapsed into a single space, and lines break on spaces or dashes when needed.</dd>
