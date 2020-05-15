@@ -241,9 +241,6 @@ The `white-space` property controls how the browser will treat white space withi
 <dt>Example 5</dt>
 <dd> some stuff with inline code & HTML & escapes (start the line with the escape char): <code>this is code</code> and this is html <code>
 \<p></code>. end of item.</dd>
-<dt>Example 6</dt>
-<dd> some stuff with inline code & backtics & escapes (start the line with the escape char): `this is code` and this is html `
-\<p>`. end of item.</dd>
 </dl>
 
 <dl>
@@ -253,11 +250,11 @@ The `white-space` property controls how the browser will treat white space withi
 
 <dt><code>nowrap</code></dt>
 
-<dd>Multiple consecutive white space characters are collapsed, this is <code>\<br \/\></code> some fun. but lines only break on  `\<br /\>` tags.</dd>
+<dd>Multiple consecutive white-space characters are collapsed, but lines only break on <code>\<br /></code> tags.</dd>
 
 <dt><code>pre</code></dt>
 
-<dd>All white space is preserved (not collapsed), including newline characters. Lines only break on newline characters (i.e. behave like a <code><pre></code> tag).</dd>
+<dd>All white-space is preserved (not collapsed), including newline characters. Lines only break on newline characters (i.e. behave like a <code>\<pre></code> tag).</dd>
 
 <dt><code>pre-wrap</code></dt>
 
