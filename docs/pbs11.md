@@ -229,19 +229,6 @@ Next, we may want to force the content of the cell to always stay on one line. U
 
 The `white-space` property controls how the browser will treat white space within a tag. Below is a list of the most commonly used values for this property:
 
-<dl>
-<dt>Example 1</dt>
-<dd> some stuff with inline code & backticks: `this is code` and this is html `<p>`. end of item.</dd>
-<dt>Example 2</dt>
-<dd> some stuff with inline code & HTML: <code>this is code</code> and this is html <code><p></code>. end of item.</dd>
-<dt>Example 3</dt>
-<dd> some stuff with inline code & backticks & escapes: `this is code` and this is html `\<p\>`. end of item.</dd>
-<dt>Example 4</dt>
-<dd> some stuff with inline code & HTML & escapes: <code>this is code</code> and this is html <code>\<p\></code>. end of item.</dd>
-<dt>Example 5</dt>
-<dd> some stuff with inline code & HTML & escapes (start the line with the escape char): <code>this is code</code> and this is html <code>
-\<p></code>. end of item.</dd>
-</dl>
 
 <dl>
 <dt><code>normal</code></dt>
@@ -250,11 +237,11 @@ The `white-space` property controls how the browser will treat white space withi
 
 <dt><code>nowrap</code></dt>
 
-<dd>Multiple consecutive white-space characters are collapsed, but lines only break on <code>\<br /></code> tags.</dd>
+<dd>Multiple consecutive white-space characters are collapsed, but lines only break on <code>\< br /></code> tags.</dd>
 
 <dt><code>pre</code></dt>
 
-<dd>All white-space is preserved (not collapsed), including newline characters. Lines only break on newline characters (i.e. behave like a <code>\<pre></code> tag).</dd>
+<dd>All white-space is preserved (not collapsed), including newline characters. Lines only break on newline characters (i.e. behave like a <code>\< pre></code> tag).</dd>
 
 <dt><code>pre-wrap</code></dt>
 
