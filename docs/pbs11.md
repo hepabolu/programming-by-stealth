@@ -229,7 +229,6 @@ Next, we may want to force the content of the cell to always stay on one line. U
 
 The `white-space` property controls how the browser will treat white space within a tag. Below is a list of the most commonly used values for this property:
 
-this is `<br />` some fun
 <dl>
 <dt><code>normal</code></dt>
 
@@ -237,7 +236,7 @@ this is `<br />` some fun
 
 <dt><code>nowrap</code></dt>
 
-<dd>Multiple consecutive white space characters are collapsed, but lines only break on  `<br />` tags.</dd>
+<dd>Multiple consecutive white space characters are collapsed, this is `<br />` some fun. but lines only break on  `<br />` tags.</dd>
 
 <dt><code>pre</code></dt>
 
