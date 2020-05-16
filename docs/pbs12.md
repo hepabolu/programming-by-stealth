@@ -14,7 +14,7 @@ You can also <a href="http://media.blubrry.com/nosillacast/traffic.libsyn.com/no
 
 ## A Little History and Context
 
-[JavaScript](https://en.wikipedia.org/wiki/JavaScript) was developed by Netscape in the very early days of the web. The first version was released in 1995. While the name makes it sound like JavaScript is in some way related to Java, it isn’t. Java was a big buzzword in the 1990s. It seems the name JavaScript was just Netscape’s way of caching in on some of the Java hype. JavaScript’s syntax is actually based on C rather than Java.
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript) was developed by Netscape in the very early days of the web. The first version was released in 1995. While the name makes it sound like JavaScript is in some way related to Java, it isn’t. Java was a big buzzword in the 1990s. It seems the name JavaScript was just Netscape’s way of cashing in on some of the Java hype. JavaScript’s syntax is actually based on C rather than Java.
 
 Originally, JavaScript was a by-the-book interpreted language. However, in their relentless drive for speed, browser authors have muddied the waters quite a bit. Modern browsers now use a technique known as [Just-in-time Compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation), or JIT, to convert JavaScript code into native byte code, like you’ll find in a regular compiled app. However, from the programmer’s point of view, JavaScript continues to behave like an interpreted language – we write it, and we run it – we never have to compile it.
 
