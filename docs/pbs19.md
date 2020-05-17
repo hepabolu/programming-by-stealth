@@ -30,12 +30,19 @@ Write code to print out the Fibonacci series of numbers, stopping after the numb
 
 The first two numbers in the series are 0 and 1. After that, the next number in the series is the sum of the previous two numbers.
 
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+4. Fourth item
+
 Build up your solution in the following way:
 
 1.  Create an array named `fibonacci` with two initial values – 0, and 1.
 2.  Write a `while` loop that will keep going until the value of the last element of the fibonacci array is greater than 1,000,000. Inside the `while` loop, do the following:
-    1.  Calculate the next Fibonacci number by adding the last two elements in the `fibonacci` array together.
-    2.  Add this new value to the end of the `fibonacci` array.
+  1.  Calculate the next Fibonacci number by adding the last two elements in the `fibonacci` array together.
+  2.  Add this new value to the end of the `fibonacci` array.
 3.  Print the Fibonacci series, one element per line, by converting the `fibonacci` array into a string separated by newline characters.
 
 ### Solution
