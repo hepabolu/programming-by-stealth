@@ -30,13 +30,6 @@ Write code to print out the Fibonacci series of numbers, stopping after the numb
 
 The first two numbers in the series are 0 and 1. After that, the next number in the series is the sum of the previous two numbers.
 
-1. First item
-2. Second item
-3. Third item
-    1. Indented item
-    2. Indented item
-4. Fourth item
-
 Build up your solution in the following way:
 
 1.  Create an array named `fibonacci` with two initial values – 0, and 1.
@@ -60,7 +53,7 @@ pbs.say(fibonacci.join('\n'));
 
 This is a total cliché, and very common as an interview question. It tests if a programmer understands programming basics like loops and conditionals.
 
-Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number, and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five, print “FizzBuzz”.
+Write a program that prints the numbers from 1 to 100. But for multiples of three, print “Fizz” instead of the number. For the multiples of five, print “Buzz”. For numbers which are multiples of both three and five, print “FizzBuzz”.
 
 ### Solution
 
