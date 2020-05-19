@@ -22,13 +22,13 @@ You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/n
 
 ## Solution to PBS 22 Challenge
 
-But first, below is a solution to the challenge I set at the end of [the previous instalment](https://bartificer.net/pbs22). I provided an HTML file as a starting point, and then set the following tasks:
+But first, below is a solution to the challenge I set at the end of [the previous instalment](https://pbs.bartificer.net/pbs22). I provided an HTML file as a starting point, and then set the following tasks:
 
 1.  In the `script` element within the `head` element, declare a variable named blinkIntervalID with the value `0` (this variable will be in the global scope)
 2.  Below your variable declaration, declare a function named `toggleBlinking()`. This function will take no arguments, and return nothing. If the current value of the global variable `blinkIntervalID` is `0`, this function should create a new interval which will toggle the class `highlighted` on all paragraphs every second, and save the interval ID into the global variable `blinkIntervalID`. If the current value of the global variable `blinkIntervalID` is not `0`, the function should cancel the timeout who’s ID is stored in the global variable `blinkIntervalID`, and set the variable to `0`.
 3.  Create an anonymous function that will execute when the DOM has finished loading. Inside this function, add an event handler to every paragraph that will call the function `toggleBlinking()` every time the user clicks on a paragraph.
 
-Below is my solution to the assignment. Just a reminder that when it comes to programming, there are an infinity of possible correct solutions, so if your code works, but look different to mine, that’s just fine!
+Below is my solution to the assignment. Just a reminder that when it comes to programming, there are an infinity of possible correct solutions, so if your code works, but looks different from mine, that’s just fine!
 
 ```html
 <!DOCTYPE HTML>
