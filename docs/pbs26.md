@@ -326,7 +326,7 @@ var daysOfTheWeek = {
 };
 ```
 
-We can now write a function to test if a given string is a day if the week like so:
+We can now write a function to test if a given string is a day of the week like so:
 
 ```javascript
 function isDayOfTheWeek(d){
@@ -974,7 +974,7 @@ You can see the API in use in `pbs26.html`:
 </html>
 ```
 
-The HTML file will only work if it is in the same folder as the `contrib` and `lib` folders from the ZIP file. Assuming you extracted the ZIP into your local web server’s document root, and that your local web server is running, you should be able to see the example in action at `http://localhost/pbs26/pbs26.html`. Alternatively, you can [see it in action on my web server](https://www.bartbusschots.ie/pbsdemos/pbs26/pbs26.html).
+The HTML file will only work if it is in the same folder as the `contrib` and `lib` folders from the ZIP file. Assuming that you extracted the ZIP into your local web server’s document root, and that your local web server is running, you should be able to see the example in action at `http://localhost/pbs26/pbs26.html`. Alternatively, you can [see it in action on my web server](https://www.bartbusschots.ie/pbsdemos/pbs26/pbs26.html).
 
 You can generate the public documentation for this API by opening a terminal in the folder you extracted the ZIP file to, and running the command:
 
@@ -984,7 +984,7 @@ You can generate the developer documentation, including all the private variable
 
 `jsdoc lib/pbs.WorldClock.js --destination docs-dev --private -c jsdoc.conf.json`
 
-Assuming you extracted the ZIP file into your local web server’s document root, and that your local web server is running, you should now be able to access the public documentation at `http://localhost/pbs26/docs/`, and the developer documentation at `http://localhost/pbs26/docs-dev/`. Alternatively, you can access both sets of documentation on my web server: [public docs](https://www.bartbusschots.ie/pbsdemos/pbs26/docs/) & [private docs](https://www.bartbusschots.ie/pbsdemos/pbs26/docs-dev/).
+Assuming that you extracted the ZIP file into your local web server’s document root, and that your local web server is running, you should now be able to access the public documentation at `http://localhost/pbs26/docs/`, and the developer documentation at `http://localhost/pbs26/docs-dev/`. Alternatively, you can access both sets of documentation on my web server: [public docs](https://www.bartbusschots.ie/pbsdemos/pbs26/docs/) & [private docs](https://www.bartbusschots.ie/pbsdemos/pbs26/docs-dev/).
 
 In this example we initialise the first clock ourselves by explicitly calling the constructor of our `pbs.WorldClock` prototype, while we allow the second clock to be automatically initialised. In the first case we pass the timezone to the constructor as an argument, but in the second case we never call the constructor ourselves, so we can’t do that. Instead, we specify the desired timezone directly in the HTML using a data attribute.
 
