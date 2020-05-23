@@ -712,18 +712,19 @@ As with all other selectors, the attribute selectors can be combined with the se
 A button is a clickable inline element. In general, most buttons just contain text, but they can contain other HTML elements.
 
 You should always specify a `type` attribute on your buttons. You can choose from the following values:
+<dl>
+<dt><code>type="submit"</code> (the default)</dt>
 
-`type="submit"` (the default)
+<dd>Clicking on the button will submit the form it belongs to.</dd>
 
-Clicking on the button will submit the form it belongs to.
+<dt><code>type="reset"</code></dt>
 
-`type="reset"`
+<dd>Clicking on the button will reset all form inputs within the form the button belongs to to their initial values.</dd>
 
-Clicking on the button will reset all form inputs within the form the button belongs to to their initial values.
+<dt><code>type="button"</code></dt>
 
-`type="button"`
-
-A plain button that will do nothing unless a JavaScript event handler is added to it.
+<dd>A plain button that will do nothing unless a JavaScript event handler is added to it.</dd>
+</dl>
 
 As mentioned in the previous instalment, if no type is supplied or an invalid value is specified, `type="submit"` is assumed.
 
