@@ -1,6 +1,6 @@
 # PBS 27 of x – JS Prototype Revision | HTML Forms
 
-In this instalment we’ll make a start on a large topic which we have intentionally ignored until now – taking user input on the web. The way this is done is through HTML forms. It will take us a few instalments to learn all about them. So we’ll start with the basics in this instalment.
+In this instalment we’ll make a start on a large topic which we have intentionally ignored until now – taking user input on the web. This is done through HTML forms. It will take us a few instalments to learn all about them. So we’ll start with the basics in this instalment.
 
 The code for the examples in this instalment has been collected into a single ZIP file which you can download [here](https://www.bartbusschots.ie/s/wp-content/uploads/2016/12/pbs27.zip) or [here on GitHub](https://cdn.jsdelivr.net/gh/bbusschots/pbs-resources/instalmentZips/pbs27.zip).
 
