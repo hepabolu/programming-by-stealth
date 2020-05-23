@@ -1,6 +1,6 @@
 # PBS 27 of x – JS Prototype Revision | HTML Forms
 
-In this instalment we’ll make a start on a large topic which we have intentionally ignored until now – taking user input on the web. This is done through HTML forms. It will take us a few instalments to learn all about them. So we’ll start with the basics in this instalment.
+In this instalment we’ll make a start on a large topic which we have intentionally ignored until now – taking user input on the web. The way this is done is through HTML forms. It will take us a few instalments to learn all about them. So we’ll start with the basics in this instalment.
 
 The code for the examples in this instalment has been collected into a single ZIP file which you can download [here](https://www.bartbusschots.ie/s/wp-content/uploads/2016/12/pbs27.zip) or [here on GitHub](https://cdn.jsdelivr.net/gh/bbusschots/pbs-resources/instalmentZips/pbs27.zip).
 
@@ -86,7 +86,7 @@ var optionDetails = {
 
 We have come across this kind of behaviour before – within callbacks passed to jQuery’s `.each()` function: the special `this` variable is always a reference to the HTML element currently being iterated over. This very useful behaviour is achieved using the `.call()` function which is part of JavaScript’s `Function` prototype.
 
-When we first learned about functions, we learned that, in JavaScript, functions are objects. We didn’t dwell on that fact, but it bears a closer look now. JavaScript functions are not just objects. They are objects with the prototype `Function`. That prototype brings with it a number of functions that can be applied to any/every function. One of those functions is `.call()`. As its name suggest, `.call()` calls (or invokes) the function, but it does so in a very useful way – the first argument you pass to `.call()` will be used as the special `this` variable within the function as it executes. The second argument to `.call()` will be passed as the first argument to the function, the third argument to `.call()` as the second argument to the function, and so on.
+When we first learned about functions, we learned that, in JavaScript, functions are objects. We didn’t dwell on that fact, but it bears a closer look now. JavaScript functions are not just objects. They are objects with the prototype `Function`. That prototype brings with it a number of functions that can be applied to any/every function. One of those functions is `.call()`. As its name suggests, `.call()` calls (or invokes) the function, but it does so in a very useful way – the first argument you pass to `.call()` will be used as the special `this` variable within the function as it executes. The second argument to `.call()` will be passed as the first argument to the function, the third argument to `.call()` as the second argument to the function, and so on.
 
 So – given all that, this is how the `.option()` accessor method actually sets the new value of an option:
 
