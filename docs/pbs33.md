@@ -248,7 +248,7 @@ QUnit ships with an impressive collection of ready-to-use assertions, and it pro
 <dl>
 <dt><code>assert.ok(state [, message])</code></dt>
 
-<dd>This is the simplest of the assertions, it passes if the first argument evaluates to any truthy value of any kind.</dd>
+<dd>This is the simplest of the assertions. It passes if the first argument evaluates to any truthy value of any kind.</dd>
 
 <dt><code>assert.equal(actual, expected [, message])</code></dt>
 
@@ -763,14 +763,15 @@ Now that we have our tests written, we can finish our implementation of the `pbs
 This implementation passes all our tests.
 
  ### Aside – the JavaScript `.slice()` Function
+
 <aside class="text-muted my-3">
- <p>Notice that the function makes use of the `.slice()` function from the `Array` prototype. I know Allison has been using this function in her code for some time, but it’s not one we’ve ever discussed as part of the series.</p>
+ <p>Notice that the function makes use of the <code>.slice()</code> function from the <code>Array</code> prototype. I know Allison has been using this function in her code for some time, but it’s not one we’ve ever discussed as part of the series.</p>
 
  <p>What this function does is return a subset, or slice, of an array. You can use no arguments at all, in which case you’ll get the whole array back.</p>
 
- <p>If you choose to pass it, the first argument will be interpreted as your starting point – use a value of 0 to begin at the start of the array. Positive integer values will move the starting array index forward, so `.slice(2)` will exclude the first three items of the array from the result (remember, arrays are zero-indexed). You can also use negative numbers to work from the back of the array forwards when defining your start point. The last element in the array is considered to be at index -1. The returned array is still in the normal forward order. So, `.slice(-3)` returns the last three elements in the array in the same order they were originally present in the array.</p>
+ <p>If you choose to pass it, the first argument will be interpreted as your starting point – use a value of 0 to begin at the start of the array. Positive integer values will move the starting array index forward, so <code>.slice(2)</code> will exclude the first three items of the array from the result (remember, arrays are zero-indexed). You can also use negative numbers to work from the back of the array forwards when defining your start point. The last element in the array is considered to be at index -1. The returned array is still in the normal forward order. So, <code>.slice(-3)</code> returns the last three elements in the array in the same order they were originally present in the array.</p>
 
- <p>Finally, if you choose to pass it, the second argument sets the index **before** which to stop the returned array at. So, `.slice(1, 3)` returns the second and third elements of the array (those at indexes 1 & 2). You can also use negative indexes in the second argument. To slice everything but the first and last elements, you could use `.slice(1, -1)`. If you don’t specify a second argument, the length of the array is used, i.e. the slice runs to the end of the array.</p>
+ <p>Finally, if you choose to pass it, the second argument sets the index <strong>before</strong> which to stop the returned array at. So, <code>.slice(1, 3)</code> returns the second and third elements of the array (those at indexes 1 & 2). You can also use negative indexes in the second argument. To slice everything but the first and last elements, you could use <code>.slice(1, -1)</code>. If you don’t specify a second argument, the length of the array is used, i.e. the slice runs to the end of the array.</p>
 </aside>
 
 So far, because we’ve been working on quite simplistic code, there has been no need to do any refactoring at the end of any of our cycles. This time though, there is some room for refactoring, though it’s in the test code, not the API itself.
