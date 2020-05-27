@@ -248,7 +248,7 @@ QUnit ships with an impressive collection of ready-to-use assertions, and it pro
 <dl>
 <dt><code>assert.ok(state [, message])</code></dt>
 
-This is the simplest of the assertions, it passes if the first argument evaluates to any truthy value of any kind.
+<dd>This is the simplest of the assertions, it passes if the first argument evaluates to any truthy value of any kind.</dd>
 
 <dt><code>assert.equal(actual, expected [, message])</code></dt>
 
@@ -284,7 +284,7 @@ The API should be named `pbs.math`, and should provide the following functions:
 <dl>
 <dt><code>factorial(n)</code></dt>
 
- <dd>The function should return the factorial of <code>n</code> (the first argument) as an integer. The function should throw a new <code>Error</code> if <code>n</code> is not a positive integer. You’ll find a [definition of factorials on Wikipedia](https://en.wikipedia.org/wiki/Factorial).</dd>
+ <dd>The function should return the factorial of <code>n</code> (the first argument) as an integer. The function should throw a new <code>Error</code> if <code>n</code> is not a positive integer. You’ll find a <a href="https://en.wikipedia.org/wiki/Factorial/" title="Factorial" target="_blank">definition of factorials on Wikipedia </a>.</dd>
 
 <dt><code>fibonacciSeries(n)</code></dt>
 
@@ -764,13 +764,13 @@ This implementation passes all our tests.
 
  ### Aside – the JavaScript `.slice()` Function
 <aside class="text-muted my-3">
- Notice that the function makes use of the `.slice()` function from the `Array` prototype. I know Allison has been using this function in her code for some time, but it’s not one we’ve ever discussed as part of the series.
+ <p>Notice that the function makes use of the `.slice()` function from the `Array` prototype. I know Allison has been using this function in her code for some time, but it’s not one we’ve ever discussed as part of the series.</p>
 
- What this function does is return a subset, or slice, of an array. You can use no arguments at all, in which case you’ll get the whole array back.
+ <p>What this function does is return a subset, or slice, of an array. You can use no arguments at all, in which case you’ll get the whole array back.</p>
 
- If you choose to pass it, the first argument will be interpreted as your starting point – use a value of 0 to begin at the start of the array. Positive integer values will move the starting array index forward, so `.slice(2)` will exclude the first three items of the array from the result (remember, arrays are zero-indexed). You can also use negative numbers to work from the back of the array forwards when defining your start point. The last element in the array is considered to be at index -1. The returned array is still in the normal forward order. So, `.slice(-3)` returns the last three elements in the array in the same order they were originally present in the array.
+ <p>If you choose to pass it, the first argument will be interpreted as your starting point – use a value of 0 to begin at the start of the array. Positive integer values will move the starting array index forward, so `.slice(2)` will exclude the first three items of the array from the result (remember, arrays are zero-indexed). You can also use negative numbers to work from the back of the array forwards when defining your start point. The last element in the array is considered to be at index -1. The returned array is still in the normal forward order. So, `.slice(-3)` returns the last three elements in the array in the same order they were originally present in the array.</p>
 
- Finally, if you choose to pass it, the second argument sets the index **before** which to stop the returned array at. So, `.slice(1, 3)` returns the second and third elements of the array (those at indexes 1 & 2). You can also use negative indexes in the second argument. To slice everything but the first and last elements, you could use `.slice(1, -1)`. If you don’t specify a second argument, the length of the array is used, i.e. the slice runs to the end of the array.
+ <p>Finally, if you choose to pass it, the second argument sets the index **before** which to stop the returned array at. So, `.slice(1, 3)` returns the second and third elements of the array (those at indexes 1 & 2). You can also use negative indexes in the second argument. To slice everything but the first and last elements, you could use `.slice(1, -1)`. If you don’t specify a second argument, the length of the array is used, i.e. the slice runs to the end of the array.</p>
 </aside>
 
 So far, because we’ve been working on quite simplistic code, there has been no need to do any refactoring at the end of any of our cycles. This time though, there is some room for refactoring, though it’s in the test code, not the API itself.
@@ -973,7 +973,7 @@ QUnit.module('pbs.math.fibonacciSeries()', {}, function(){
 });
 ```
 
-Notice that because we have no need for any hooks, we use an empty function literal (`{}`) as the second argument to `QUnit.module()`.
+Notice that, because we have no need for any hooks, we use an empty function literal (`{}`) as the second argument to `QUnit.module()`.
 
 At this stage our three files are complete. You can find the final versions of all three in the instalment’s ZIP file in the `pbs33a` folder.
 
