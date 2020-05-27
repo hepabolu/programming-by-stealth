@@ -279,6 +279,7 @@ QUnit ships with an impressive collection of ready-to-use assertions, and it pro
 
 Let’s work through a simple practical example – let’s develop a very basic API that collects together a few maths functions using the following specification:
 
+<blockquote>
 The API should be named `pbs.math`, and should provide the following functions:
 
 <dl>
@@ -290,7 +291,7 @@ The API should be named `pbs.math`, and should provide the following functions:
 
  <dd>The function should return the fibonacci series up to and possibly including <code>n</code> as an array of integers. The function should throw an error if <code>n</code> is not a number, and return an empty array if <code>n</code> has a value below 0. You should use the modern variant of the sequence which uses <code>[0, 1]</code> as the starting point for the series. You’ll find a [definition of the Fibonacci Series on Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number).</dd>
 </dl>
-
+</blockquote>
 
 We’ll start with by creating the following three blank files (paths relative to the base folder for the project):
 
@@ -762,9 +763,9 @@ Now that we have our tests written, we can finish our implementation of the `pbs
 
 This implementation passes all our tests.
 
- ### Aside – the JavaScript `.slice()` Function
+<blockquote>
+<h3>Aside &#8211; the JavaScript <code>.slice()</code> Function</h3>
 
-<aside class="text-muted my-3">
  <p>Notice that the function makes use of the <code>.slice()</code> function from the <code>Array</code> prototype. I know Allison has been using this function in her code for some time, but it’s not one we’ve ever discussed as part of the series.</p>
 
  <p>What this function does is return a subset, or slice, of an array. You can use no arguments at all, in which case you’ll get the whole array back.</p>
@@ -772,7 +773,7 @@ This implementation passes all our tests.
  <p>If you choose to pass it, the first argument will be interpreted as your starting point – use a value of 0 to begin at the start of the array. Positive integer values will move the starting array index forward, so <code>.slice(2)</code> will exclude the first three items of the array from the result (remember, arrays are zero-indexed). You can also use negative numbers to work from the back of the array forwards when defining your start point. The last element in the array is considered to be at index -1. The returned array is still in the normal forward order. So, <code>.slice(-3)</code> returns the last three elements in the array in the same order they were originally present in the array.</p>
 
  <p>Finally, if you choose to pass it, the second argument sets the index <strong>before</strong> which to stop the returned array at. So, <code>.slice(1, 3)</code> returns the second and third elements of the array (those at indexes 1 & 2). You can also use negative indexes in the second argument. To slice everything but the first and last elements, you could use <code>.slice(1, -1)</code>. If you don’t specify a second argument, the length of the array is used, i.e. the slice runs to the end of the array.</p>
-</aside>
+</blockquote>
 
 So far, because we’ve been working on quite simplistic code, there has been no need to do any refactoring at the end of any of our cycles. This time though, there is some room for refactoring, though it’s in the test code, not the API itself.
 
