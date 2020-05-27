@@ -289,7 +289,7 @@ The API should be named `pbs.math`, and should provide the following functions:
 
 <dt><code>fibonacciSeries(n)</code></dt>
 
- <dd>The function should return the fibonacci series up to and possibly including <code>n</code> as an array of integers. The function should throw an error if <code>n</code> is not a number, and return an empty array if <code>n</code> has a value below 0. You should use the modern variant of the sequence which uses <code>[0, 1]</code> as the starting point for the series. You’ll find a [definition of the Fibonacci Series on Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number).</dd>
+ <dd>The function should return the fibonacci series up to and possibly including <code>n</code> as an array of integers. The function should throw an error if <code>n</code> is not a number, and return an empty array if <code>n</code> has a value below 0. You should use the modern variant of the sequence which uses <code>[0, 1]</code> as the starting point for the series. You’ll find a <a href="https://en.wikipedia.org/wiki/Fibonacci_number" target="_blank">definition of the Fibonacci Series on Wikipedia</a>.</dd>
 </dl>
 </blockquote>
 
