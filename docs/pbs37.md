@@ -18,7 +18,7 @@ You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/n
 
 ## Links
 
-*   GitHub – [github.com](https://github.com/) (free for Open-Source-licensed code)
+*   GitHub – [github.com](https://github.com/) (free for Open-Source licensed code)
 *   The GitHub Desktop Client – [desktop.github.com](https://desktop.github.com/) (free)
 *   Komodo Edit – [www.activestate.com/…](https://www.activestate.com/komodo-ide/downloads/edit) (free)
 *   Dash – [kapeli.com/…](https://kapeli.com/dash) ($24.99)
