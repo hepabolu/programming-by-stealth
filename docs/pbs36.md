@@ -129,9 +129,9 @@ These kinds of inputs are very easy to create, simply use an `<input>` tag with 
 
 ### Inputting Numbers Precisely
 
-Now let’s move on to some of the useful new text input types provided by HTML 5. Firstly, lets look at inputting numbers.
+Now let’s move on to some of the useful new text input types provided by HTML 5. Firstly, let's look at inputting numbers.
 
-Just to note that all the data types from here on out support HTML 5 form validation. We will be looking at how that works in the next instalment, but not until then.
+Just note that all the data types from here on out support HTML 5 form validation. We will be looking at how that works in the next instalment, but not until then.
 
 The most generic form of number input is provided by using the `<input>` tag with `type="number"`. This input type is designed to allow any number to be entered, whole or decimal, and positive or negative (though decimal numbers aren’t allowed by default). When rendered on screen, up and down arrows are usually added to one of the sides of the input box, allowing users to easily increase and decrease the entered value. Mobile browsers should present a number pad instead of a regular text keyboard when you tap on an input with a `type` of `number`.
 
@@ -151,7 +151,7 @@ Again, you can see some examples of inputs of this type in `pbs36.html`.
 
 ### Inputting Approximate Numbers
 
-If you don’t want an exact number from a user, but simply an approximate value within a given range, you can use the `<input>` tag with `type="range"`. Like `type="number"`, `type="range"` supports the `min`, `max`, and `step` attributes, but it doesn’t present the user with a text box – instead, it presents the user with a horizontal slider. The left edge of the slider represents the `min` value, and the right edge the `max` value.  The positions in-between that the slider snaps to are determined by the `step`.Note that, if you don’t want the slider to snap to any specific values, you can set `step="any"`. The default values are `min="0"`, `max="100"`, and `step="1"`.
+If you don’t want an exact number from a user, but simply an approximate value within a given range, you can use the `<input>` tag with `type="range"`. Like `type="number"`, `type="range"` supports the `min`, `max`, and `step` attributes, but it doesn’t present the user with a text box – instead, it presents the user with a horizontal slider. The left edge of the slider represents the `min` value, and the right edge the `max` value.  The positions in-between that the slider snaps to are determined by the `step`. Note that, if you don’t want the slider to snap to any specific values, you can set `step="any"`. The default values are `min="0"`, `max="100"`, and `step="1"`.
 
 As you’ve probably guessed by now, you’ll find an example of this input type in `pbs36.html`.
 
