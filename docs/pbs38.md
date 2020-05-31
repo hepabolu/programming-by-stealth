@@ -57,9 +57,7 @@ The majority of HTML elements fall into two main categories – _block-level ele
     <p>This paragraph contains <strong>some text that is bold <em>and some that is bold and italic</strong>, and some that is just italic</em>.</p>
     ```
 
-    Answer
-
-    The HTML elements are not nested within one another – the `em` element is both inside and outside the `strong` element, which is not permitted by the HTML 5 spec.
+    Answer:
 
     The HTML elements are not nested within one another – the `em` element is both inside and outside the `strong` element, which is not permitted by the HTML 5 spec.
 
