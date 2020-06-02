@@ -150,7 +150,7 @@ $('span#rating_ui > span').click(function(){
 });
 ```
 
-We should now be able to alter our rating by clicking to tapping on the thumb icons.
+We should now be able to alter our rating by clicking or tapping on the thumb icons.
 
 ### Making the UI Work with the Keyboard
 
