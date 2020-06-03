@@ -297,7 +297,7 @@ If you refresh `sample.html` you’ll see that we now have working play and stop
 
 ### Part 2 — A Generation Counter
 
-The second part of the challenge was to implement as counter showing the current generation of the automaton (each step is a generation).
+The second part of the challenge was to implement a counter showing the current generation of the automaton (each step is a generation).
 
 The first step is obviously to add another instance variable to the `bartificer.ca.Automaton` prototype to store the generation count. Here it is initialised in the constructor:
 
@@ -779,7 +779,7 @@ console.log(gravitationalForce(6e24, 7.35e22, 384400000));
 
 Remember, variables hold primitive values and references to objects. So if you declare an object with `const`, you can still alter the contents of the object. But you can never change the object that variable points to.
 
-To illustrate the point, the this will generate an error:
+To illustrate the point, this will generate an error:
 
 ```javascript
 const x = 2;
