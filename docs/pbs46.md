@@ -170,7 +170,7 @@ console.log(secondArray);
 // [ 'bogies', 'boogers', 'snot' ]
 ```
 
-Wouldn’t it be great to be able to just include the elements of the first array in the second as you declare it? Let’s try just include the first array in the second without the new spread operator, what happens?
+Wouldn’t it be great to be able to just include the elements of the first array in the second as you declare it? Let’s try just including the first array in the second without the new spread operator and see what happens.
 
 ```javascript
 const firstArray = ['boogers', 'snot'];
