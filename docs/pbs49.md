@@ -8,7 +8,7 @@ We’ll also take some time to revise the basics of JavaScript objects.
 
 Note that this instalment is split over two podcast episodes, only one has been recorded to date.
 
-## Matching Podcast Episode 521
+## Matching Podcast Episode 521 & 522
 
 Listen Along (Part 1 of 2): Chit Chat Across the Pond Episode 521
 
@@ -787,9 +787,9 @@ Using [the tagged release `PBS49-Challenge-StartingPoint` on GitHub](https://git
 
 An instance function named `.equals()` should be added to the `bartificer.ca.State` class. The function should take one argument, the thing to test. If the thing to test is an instance of `bartificer.ca.State`, and, it has the same value and label as the instance the function was called on, then it should return `true`, otherwise, it should return `false`.
 
-### Part 2 — Re-factor the `bartificer.ca.Automaton` constructor
+### Part 2 — Refactor the `bartificer.ca.Automaton` constructor
 
-**Note:** updated 19 Feb 2018 to correctly reflect the fact that the constructor in the starting point code has 5 required arguments, not three like original stated.
+**Note:** *updated 19 Feb 2018 to correctly reflect the fact that the constructor in the starting point code has 5 required arguments, not three like original stated.*
 
 At the moment the constructor in the `bartificer.ca.Automaton` class takes 6 arguments, five required arguments, and one optional. We’re going to need to add another argument to allow a set of allowed states to be passed, so that would take the constructor to a whopping 7 arguments. Any more than 5 arguments is generally considered confusing and a bad smell, so even before we add another we’ve already got a problem. What can we do?
 
