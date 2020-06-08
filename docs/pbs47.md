@@ -24,7 +24,7 @@ I’ve published my sample solution to GitHub as the [`PBS46-Challenge-Solution`
 
 There are no prototypes defined within the test suite. So there were no opportunities to use the `class` keyword. However, since QUnit relies very heavily on callbacks, there were a lot of anonymous functions to be considered for conversion to arrow functions.
 
-Remember that the defining feature of an arrow function is that it does not get its own `this`, but instead shares it’s nearest containing true function’s `this`. Sometimes that behaviour is a help, sometimes it’s a hindrance, and sometimes it’s irrelevant. Each anonymous function definition had to be evaluated on its own merit.
+Remember that the defining feature of an arrow function is that it does not get its own `this`, but instead shares its nearest containing true function’s `this`. Sometimes that behaviour is a help, sometimes it’s a hindrance, and sometimes it’s irrelevant. Each anonymous function definition had to be evaluated on its own merit.
 
 Most of the anonymous functions in the test suite make no use of `this` at all. So they’ll work just the same as regular functions or arrow functions. In those situations I chose to convert because the arrow function syntax is shorter, but that’s just a preference for shorter code on my part.
 
@@ -415,7 +415,7 @@ Let’s start with a very quick look at `pbs47a-v1/index.html`:
 </html>
 ```
 
-This is a very straight-forward HTML 5 document, but I do want to draw your attention to three things:
+This is a very straightforward HTML 5 document, but I do want to draw your attention to three things:
 
 1.  The page loads the jQuery API from the official jQuery CDN.
 2.  The page loads `pbs47a.js`, which will contain all the JavaScript for this little project.
