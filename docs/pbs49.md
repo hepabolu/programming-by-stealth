@@ -14,7 +14,13 @@ Listen Along (Part 1 of 2): Chit Chat Across the Pond Episode 521
 
 <audio controls src="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2018_02_03.mp3">Your browser does not support HTML 5 audio 🙁</audio>
 
-You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2018_02_03.mp3?autoplay=0&loop=0&controls=1" >Download the MP3</a>
+You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2018_02_03.mp3?autoplay=0&loop=0&controls=1" >Download the MP3 for Part 1</a>
+
+Listen Along (Part 2 of 2): Chit Chat Across the Pond Episode 522
+
+<audio controls src="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2018_02_10.mp3">Your browser does not support HTML 5 audio 🙁</audio>
+
+You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2018_02_10.mp3?autoplay=0&loop=0&controls=1" >Download the MP3 for Part 2</a>
 
 ## Challenge Solution
 
