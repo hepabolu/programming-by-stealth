@@ -789,7 +789,7 @@ An instance function named `.equals()` should be added to the `bartificer.ca.Sta
 
 ### Part 2 — Refactor the `bartificer.ca.Automaton` constructor
 
-_**Note:** *updated 19 Feb 2018 to correctly reflect the fact that the constructor in the starting point code has 5 required arguments, not three like original stated.*_
+_**Note:** updated 19 Feb 2018 to correctly reflect the fact that the constructor in the starting point code has 5 required arguments, not three as original stated._
 
 At the moment the constructor in the `bartificer.ca.Automaton` class takes 6 arguments, five required arguments, and one optional. We’re going to need to add another argument to allow a set of allowed states to be passed, so that would take the constructor to a whopping 7 arguments. Any more than 5 arguments is generally considered confusing and a bad smell, so even before we add another we’ve already got a problem. What can we do?
 
