@@ -29,11 +29,11 @@ While the full Bootstrap 4 feature set requires JavaScript, the basic Bootstrap 
 
 For now, this is all we have to do to start using Bootstrap 4:
 
-1.  #### Use the HTML 5 doctype
+1.  ### Use the HTML 5 doctype
 
     Bootstrap won’t behave consistently across browsers if the page doesn’t use the HTML 5 doctype. Since that’s the only doctype we’ve learned about in this series, that’s not going to be a problem for us 🙂
 
-2.  #### Set the Responsive Viewport Meta Tag
+2.  ### Set the Responsive Viewport Meta Tag
 
     Again, for cross-browser consistency, the Bootstrap documentation makes it clear that the following tag should be added to the `head` section of any HTML page that uses Bootstrap:
 
@@ -41,7 +41,7 @@ For now, this is all we have to do to start using Bootstrap 4:
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     ```
 
-3.  #### Include the Bootstrap 4 CSS
+3.  ### Include the Bootstrap 4 CSS
 
     You could download the Bootstrap CSS and include your own copy, but by far the easiest thing to do is to load it from the officially supported content distribution network (CDN) by adding the following into the `head` section of the HTML page:
 
