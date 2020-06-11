@@ -80,7 +80,7 @@ While the same names come up over and over again, not all names make sense in al
 
 ### Text Colours
 
-Bootstrap defines the following utility classes for controlling the colour of text within HTML elements: `text-primary`, `text-secondary`, `text-success`, `text-danger`, `text-warning`, `text-info`, `text-light`, `text-dark`, `text-body`, `text-muted`, `text-white`, `text-black-50` & `text-white-50`.
+Bootstrap defines the following utility classes for controlling the colour of text within HTML elements: `text-primary`, `text-secondary`, `text-success`, `text-danger`, `text-warning`, `text-info`, `text-light`, `text-dark`, `text-body`, `text-muted`, `text-white`, `text-black-50`, & `text-white-50`.
 
 As a general rule these classes only affect text colour. But when applied to links, they also provide nice renderings for the `:hover` pseudo-class. These classes absolutely will not affect the background colour of an element. So when using lighter colours like `text-light`, you’ll probably want to combine them with a dark background colour.
 
