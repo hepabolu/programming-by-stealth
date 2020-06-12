@@ -163,7 +163,7 @@ Probably the most striking of the Bootstrap content classes are those for tables
 
 Bootstrap assumes proper table markup, so be sure to enclose your header rows inside a `<thead>` tag, and your table’s body inside a `<tbody>` tag. Also, if your table has footer rows, they need to go within a `<tfoot>`.
 
-### The basics
+### The Basics
 
 To apply Bootstrap styling to a table, you have to give it the class `table`. That will give you the default Bootstrap styling for tables, which includes nice typography, and subtle borders at the top of each row. In my opinion the look is elegant and modern. To see for yourself, add the class `table` to both of the tables in the sandbox.
 
@@ -211,7 +211,7 @@ Again, both of these classes work on regular and dark tables.
 
 You can experiment with both of these classes in the sandbox, but I’m going to leave the borders on the larger table as they are, and make the first, smaller table fully bordered by adding the class `table-bordered`.
 
-### Smaller more Subtle Tables
+### Smaller More Subtle Tables
 
 In keeping with Bootstrap’s modern look, its default rendering to tables has a lot of white space, and uses quite large fonts. Sometimes you need your tables to be a little more compact, and that’s what the `table-sm` class is for!
 
