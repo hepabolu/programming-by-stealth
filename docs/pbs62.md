@@ -92,7 +92,7 @@ Now that we have a function, we need to call it each time an event which could i
 
 The most obvious time the number of alerts changes is when a new alert is added. So a call to `updateCounter()` needs to be added as the last line of the click handler.
 
-The other event is the closing of an alert. There is a small subtlety here. Bootstrap provides two very similar events relating the closing of buttons: `close.bs.alert` and `closed.bs.alert`. What’s the difference? One is called before the animation to remove the alert starts, and the other is called when it has finished and the alert has been destroyed. If you attach your call to `updateCounter()` to the first handler, it will still see the closing alert as existing. Your count will be wrong. You must use the second event; `**closed**.bs.alert`.
+The other event is the closing of an alert. There is a small subtlety here. Bootstrap provides two very similar events relating the closing of buttons: `close.bs.alert` and `closed.bs.alert`. What’s the difference? One is called before the animation to remove the alert starts, and the other is called when it has finished and the alert has been destroyed. If you attach your call to `updateCounter()` to the first handler, it will still see the closing alert as existing. Your count will be wrong. You must use the second event: <code><strong>closed</strong>.bs.alert</code>.
 
 You need to add a listener for this event to the alert as you build it. So this code too needs to go inside the click handler for the button add an alert. This function now looks like this:
 
@@ -127,7 +127,7 @@ You’ll find my full solution as `pbs61-challenge2-solution.html` in this insta
 
 ## Introducing Bootstrap Forms
 
-Bootstrap provides a lot of very nice features for making great looking HTML forms. Simply by using Bootstrap there are some basic non-default styles applied to form elements, but you need to opt in to the more dramatic and opinionated options Bootstrap provides. In fact, Bootstrap offers so many form-related features and options that it’s very hard to know where to begin, and what order to introduce things in.
+Bootstrap provides a lot of very nice features for making great looking HTML forms. Simply by using Bootstrap there are some basic non-default styles applied to form elements, but you need to opt in to the more dramatic and opinionated options Bootstrap provides. In fact, Bootstrap offers so many form-related features and options that it’s very hard to know where to begin, and in what order to introduce things.
 
 After many changes of mind, I’ve decided to start with a basic form containing some of the most commonly used form elements, and then to build from there.
 
