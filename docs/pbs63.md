@@ -297,7 +297,7 @@ Then there is one final more unusual option, `btn-link` to give you a button tha
 
 ### Varying Button Sizes
 
-Bootstrap buttons don’t need to be their default (quite large) size. They come in miniature and extra large too! To make a button of any style smaller, add the class `btn-sm`, and to make any button larger, add `btn-lg`
+Bootstrap buttons don’t need to be their default (quite large) size. They come in miniature and extra large too! To make a button of any style smaller, add the class `btn-sm`, and to make any button larger, add `btn-lg`.
 
 ### Links as Buttons and Buttons as Links
 
@@ -390,7 +390,7 @@ Firstly, to get the button group to expand to the full width of the form, we are
 
 A button group is a group of buttons, so what would you call a group of button groups? A _Button Toolbar_! As their name suggests, Bootstrap Button Toolbars are very much designed to be used within web app UIs rather than within regular web pages.
 
-To create a button toolbar simple wrap your button groups in another tag (also usually a `<div>`), and give the wrapper the class btn-toolbar. To facilitate accessibility, you should also give the wrapper `role=toolbar`, and consider labelling it with `aria-label="your label"` (or linking to another label with `aria-labelledby="the_label_id"`). Finally, to add the desired amount of spacing between button group, use the Bootstrap spacing utilities, e.g. `mr-2` to add a small right margin.
+To create a button toolbar, simply wrap your button groups in another tag (also usually a `<div>`), and give the wrapper the class `btn-toolbar`. To facilitate accessibility, you should also give the wrapper `role=toolbar`, and consider labelling it with `aria-label="your label"` (or linking to another label with `aria-labelledby="the_label_id"`). Finally, to add the desired amount of spacing between button group, use the Bootstrap spacing utilities, e.g. `mr-2` to add a small right margin.
 
 As a contrived example, here’s the code for a simple text-formatting button toolbar:
 
@@ -431,4 +431,4 @@ As a contrived example, here’s the code for a simple text-formatting button to
 
 ## Final Thoughts
 
-We’ve now covered the basics of Bootstrap forms — we can collect textual data from users with text boxes and text areas, we can collect selections from users with drop-downs, checkboxes, and radio buttons, and we can trigger actions with buttons. When it comes to laying out our forms we’ve just scratched the surface though — having only seen Bootstrap’s default simplistic stacked layout. That will change next time when we explore some of the other form layout options Bootstrap provides.
+We’ve now covered the basics of Bootstrap forms — we can collect textual data from users with text boxes and text areas, we can collect selections from users with drop-downs, checkboxes, and radio buttons, and we can trigger actions with buttons. When it comes to laying out our forms, we’ve just scratched the surface though — having only seen Bootstrap’s default simplistic stacked layout. That will change next time when we explore some of the other form layout options Bootstrap provides.
