@@ -17,6 +17,7 @@ You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/n
 ## The Screencast
 [Screencast Link here](https://www.youtube.com/embed/vXIocrKmfvE?rel=0 "Screencast link to YouTube")
 
+[![Screencast Link here](../assets/pbs64/Screenshot-2018-10-02-at-23.53.54.png)](https://www.youtube.com/watch?v=vXIocrKmfvE)
 
 ## Links
 
