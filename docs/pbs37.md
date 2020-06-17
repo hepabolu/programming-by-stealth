@@ -15,9 +15,12 @@ Listen Along: Chit Chat Across the Pond Episode 494
 You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2017_07_07.mp3?autoplay=0&loop=0&controls=1" >Download the MP3</a>
 
 ## The Screencast
-[Screencast Link here](https://www.youtube.com/embed/vXIocrKmfvE?rel=0 "Screencast link to YouTube")
+[Screencast Link 1 here](https://www.youtube.com/embed/vXIocrKmfvE?rel=0 "Screencast link to YouTube")
 
-[![Screencast Link here](../assets/pbs64/Screenshot-2018-10-02-at-23.53.54.png)](https://www.youtube.com/watch?v=vXIocrKmfvE)
+[![Screencast Link 2 here](../assets/pbs64/Screenshot-2018-10-02-at-23.53.54.png)](https://www.youtube.com/watch?v=vXIocrKmfvE)
+
+<a href="https://www.youtube.com/watch?v=vXIocrKmfvE&feature=player_embedded" target="_blank"><img src="http://img.youtube.com/vi/vXIocrKmfvE/0.jpg"
+alt="Screencast Link Here" width="240" height="180" border="10" /></a>
 
 ## Links
 
