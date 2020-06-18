@@ -78,7 +78,7 @@ The updated form now looks like this:
 
 ![](../assets/pbs66/Screenshot-2018-10-29-at-19.24.07.png)
 
-You can find my full sample solution in the `pbs65-challenge-solution` folder in [“this instalment’s ZIP file](https://www.bartbusschots.ie/s/wp-content/uploads/2018/11/pbs66.zip).
+You can find my full sample solution in the `pbs65-challenge-solution` folder in [this instalment’s ZIP file](https://www.bartbusschots.ie/s/wp-content/uploads/2018/11/pbs66.zip).
 
 ## Bootstrap Form Validation
 
@@ -181,7 +181,7 @@ I’ve chosen to enable validation on each field in the form one-by-one as its i
 
 My solution relies on using Bootstrap’s `.was-validated`, `.is-valid`, `.is-invalid`, `.valid-feedback` & `.invalid-feedback` CSS classes, and the `submit`, `invalid`, `input`, & `change` JavaScript events, and jQuery’s `.is()`, `.val()`, `.prop()`, `.text()`, `.empty()`, `.addClass()`, `.removeClass()`, `.show()`, `.hide()`, `.focus()`, `.on()`, `.submit()`, & `.first()` functions. All the relevant JavaScript code is contained within the jQuery document ready handler.
 
-Big-picture-wise the code is architected as follows:
+Big-picture-wise, the code is architected as follows:
 
 - A `<div>` with an ID has been added after each input that needs validation. This `<div>` will be used to display any needed feedback.
 - There is a validation function for each text box that sets the `.is-valid` or `.is-invalid` class
