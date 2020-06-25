@@ -16,7 +16,7 @@ You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/n
 
 ## Not all Notifications are the Same
 
-When I look at the components Bootstrap offers, I see three distinct components for notifications, the first we’ve seen before, the _Alert_. The other two, the _Modal_ and the _Toast_ ,will be our focus in this instalment. Before we get stuck into the technical details I want to focus on the bigger question: why three? And how do I choose between then?
+When I look at the components Bootstrap offers, I see three distinct components for notifications, the first we’ve seen before, the _Alert_. The other two, the _Modal_ and the _Toast_, will be our focus in this instalment. Before we get stuck into the technical details, I want to focus on the bigger question: why three? And how do I choose between them?
 
 Alerts are designed to draw a user’s attention to something that’s known at the moment the page loads. A classic example would be those dismissible notices we see everywhere these days drawing our attention to cookie and privacy policies. Another might be a warning of scheduled maintenance at some future date and time. Finally, you’ll also see alerts used when a web app moves the users from one UI to another. A great example would be a webmail interface that navigates users to a full-page interface for composing and sending emails, and then navigates them back to their inbox when they hit send. When the inbox loads, it might contain an alert at the top of the page to let you know your email was successfully sent.
 
@@ -26,7 +26,7 @@ As its name suggests, the Bootstrap _Modal_ component provides an implementation
 
 In terms of notifications, modals are quite the sledge hammer, hence the need for a more subtle type of notification. That’s where Bootstrap’s _Toast_ component comes in. These notifications are inspired by push notifications on smart phones and are designed to appear, stay for some amount of time, and then disappear.
 
-So, in summary, if you know what needs to be communicated at the point in time that the page/interface loads, an Alert is probably the best fit. If you need to respond to an event after the page/interface loads you’ll probably need a Modal or a Toast. If you absolutely need the user to interact with your notification there and then, use a Modal, otherwise, use a Toast.
+So, in summary, if you know what needs to be communicated at the point in time that the page/interface loads, an Alert is probably the best fit. If you need to respond to an event after the page/interface loads you’ll probably need a Modal or a Toast. If you absolutely need the user to interact with your notification there and then, use a Modal; otherwise, use a Toast.
 
 ## The Demo Page
 
@@ -190,7 +190,7 @@ $modal.modal('show');
 
 Unlike Alerts, Modals don’t come in different styles. If you want to change the colours, you’ll need to use the regular Bootstrap utilities like `bg-success` and `text-primary` etc., or raw CSS.
 
-Bootstrap does give you some control over how your modals look and behave though. We won’t go into an exhaustive live here, but I do want to highlight some.
+Bootstrap does give you some control over how your modals look and behave though. We won’t go into an exhaustive list here, but I do want to highlight some.
 
 ### Vertical Alignment
 
@@ -202,7 +202,7 @@ You can use the radio buttons in the Modal generator form in `pbs70b.html` to se
 
 The exact width a Modal will have depends on its content and the current width of the window. You can influence the sizing by requesting Bootstrap keep the dialogue smaller than default, larger than default, or much larger than default. You do this by adding one of the classes `.modal-sm`, `.modal-lg`, or `.modal-xl` to the element with the class `.modal-dialog`.
 
-You can use the _Width_ drop-down in the Modal generator form in `pbs70b.html` to see the what the different widths look like.
+You can use the _Width_ drop-down in the Modal generator form in `pbs70b.html` to see what the different widths look like.
 
 ## Bootstrap Toast Notifications
 
@@ -317,7 +317,7 @@ $toast.toast({delay: 3000});
 
 We could show the Toast now, but there is one more thing we should do before we go ahead with that final step.
 
-While Toasts hide themselves automatically, they remain in the DOM. If your app is going to use a lot of Toasts, the DOM will become ever more cluttered with more and more invisible Toasts. We really should clean up after ourselves! We can do that by adding an event handler. Specifically, we want to respond to the event that the Bootstrap Toast plugin emits when a Toast finishes hiding itself; `hidden.bs.toast`. What is it that we want to do when this event fires? We want to delete the Toast from the DOM. We can do that with jQuery’s `.remove()` function. Putting all that together we get the following event handler:
+While Toasts hide themselves automatically, they remain in the DOM. If your app is going to use a lot of Toasts, the DOM will become ever more cluttered with more and more invisible Toasts. We really should clean up after ourselves! We can do that by adding an event handler. Specifically, we want to respond to the event that the Bootstrap Toast plugin emits when a Toast finishes hiding itself: `hidden.bs.toast`. What is it that we want to do when this event fires? We want to delete the Toast from the DOM. We can do that with jQuery’s `.remove()` function. Putting all that together we get the following event handler:
 
 ```javascript
 $toast.on('hidden.bs.toast', function(){ $(this).remove(); });
@@ -341,7 +341,7 @@ Finally, rather than downloading those two libraries and including them in the Z
 
 ## A Challenge
 
-The challenge is to create a simple timer web app. The user gets to enter an amount of minutes, and a message that will be displayed when the time is up. When they start the timer, they’ll get a Toast notification every minute updating them on how long is left, and at the end, a Modal with their message.
+The challenge is to create a simple timer web app. The user gets to enter an amount of minutes and a message that will be displayed when the time is up. When they start the timer, they’ll get a Toast notification every minute updating them on how long is left, and at the end, a Modal with their message.
 
 Your web app should be built around a form with the following three elements:
 
