@@ -8,7 +8,7 @@ You can [download this instalment’s ZIP file here](https://www.bartbusschots.i
 
 ## Matching Podcast Episode 580
 
-Listen along to this instalment on [episode 580 of the Chit Chat Across the Pond Podcast](https://www.podfeet.com/blog/2019/01/ccatp580/)
+Listen along to this instalment on [episode 580 of the Chit Chat Across the Pond Podcast](https://www.podfeet.com/blog/2019/01/ccatp-580/)
 
 <audio controls src="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2019_01_28.mp3">Your browser does not support HTML 5 audio 🙁</audio>
 
