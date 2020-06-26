@@ -20,7 +20,7 @@ The challenge set at the end of the previous instalment was to create a simplist
 
 You’ll find my full solution in this instalment’s ZIP file in the folder `pbs70-challenge-solution`.
 
-I started by creating a page with a jumbotron as a header and a single narrow centred column into which I’d place the form. To keep things nicely aligned, I used a single container with two rows, each containing one column. The first row’s column contains the jumbotron, the second row’s column contains the form. To keep the form centred, I used the offset classes for Bootstrap’s grid. The desired width for the centre column, and hence, the required amount of offset was different at every breakpoint. So both of the cols ended up with a lot of classes!
+I started by creating a page with a jumbotron as a header and a single narrow centred column into which I’d place the form. To keep things nicely aligned, I used a single container with two rows, each containing one column. The first row’s column contains the jumbotron; the second row’s column contains the form. To keep the form centred, I used the offset classes for Bootstrap’s grid. The desired width for the centre column, and hence the required amount of offset, was different at every breakpoint. So both of the cols ended up with a lot of classes!
 
 ```html
 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
@@ -28,7 +28,7 @@ I started by creating a page with a jumbotron as a header and a single narrow ce
 </div>
 ```
 
-You may notice that, to get a centred column, the rules are quite simple — the width of the centre column must always be even and the offset will be 12 minus that width divided by two. That is, at the medium break point the centre column is 8, so the offset is `(12 - 8)/2`, that is `2`, hence the two medium breakpoint classes `col-md-8 offset-md-2`.
+You may notice that, to get a centred column, the rules are quite simple — the width of the centre column must always be even and the offset will be 12 minus that width divided by two. That is, at the medium break point, the centre column is 8; so the offset is `(12 - 8)/2`, that is `2`; hence the two medium breakpoint classes `col-md-8 offset-md-2`.
 
 Within this single centred column, I used Bootstrap’s default form layout, i.e. full-width labels above full-width form controls with full-width help text below that as needed. Each grouping of label, control, and help text is wrapped in a `<div>` with the class `form-group`.
 
@@ -153,7 +153,7 @@ Finally, I also added a globally scoped variable to store the current state of t
 var RUNNING = false;
 ```
 
-With the housekeeping out of the way, we’re now ready to tackle the big one — the event handler for starting the timer! The code is quite long. Let’s start by ignoring the detail and taking a quick look at the over-all structure:
+With the housekeeping out of the way, we’re now ready to tackle the big one — the event handler for starting the timer! The code is quite long. Let’s start by ignoring the detail and taking a quick look at the overall structure:
 
 ```javascript
 // add a submit handler to the timer form
@@ -209,7 +209,7 @@ if(minsLeft > 1){
 }
 ```
 
-You’ll notice that, to help keep the code maintainable, I wrote a separate function for displaying a toast, `showToast()`, which takes two arguments, a string to use as the title, and a string to use as the body. This function consists of a slightly simplified version of the code we saw in the example file `pbs70b.html` from the previous instalment:
+You’ll notice that, to help keep the code maintainable, I wrote a separate function for displaying a toast, `showToast()`, which takes two arguments, a string to use as the title and a string to use as the body. This function consists of a slightly simplified version of the code we saw in the example file `pbs70b.html` from the previous instalment:
 
 ```javascript
 // a function for popping up a toast
@@ -387,7 +387,7 @@ Let’s start with the first approach. The markup is quite simple:
 </button>
 ```
 
-Note that because in this case the spinner will be the only thing visible in the button once the button is clicked I do have to include the screen-reader-only text inside the spinner. I also chose to use a small spinner because I think that looks better.
+Note that, because in this case the spinner will be the only thing visible in the button, once the button is clicked, I do have to include the screen-reader-only text inside the spinner. I also chose to use a small spinner because I think that looks better.
 
 With the markup in place, we need to add a click handler that will hide the text, show the spinner, and disable the button. We do this inside the document ready event handler:
 
