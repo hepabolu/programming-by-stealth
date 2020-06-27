@@ -270,7 +270,7 @@ As we’ve already seen, you can include the value of a key within the view by e
 
 In our examples so far, the view objects have been very simplistic — just simple collections of name-value pairs where each value is a string. In the real world, your views will be more complex than that. The values do not have to be strings! Of course, they can be numbers or booleans too, but they can also be objects. You’ll notice that, in our example views, the names are not single strings, but nested objects indexed by `'first'` and `'last'`. How do we include the first name in our template? Simple, we use JavaScript’s dot notation. We can get the first name with `{% raw %}'{{name.first}}'{% endraw %}` and the last name with `{% raw %}'{{name.last}}'{% endraw %}`.
 
-We can use the same technique to access properties within any object, even built-in objects like arrays. Our sample views define an array of strings named `languages`. We can access the number of languages the person speaks with `'{{languages.length}}'`.
+We can use the same technique to access properties within any object, even built-in objects like arrays. Our sample views define an array of strings named `languages`. We can access the number of languages the person speaks with `{% raw %}'{{languages.length}}'{% endraw %}`.
 
 A value in a view can also be a function. When you try to add a value to a template, and that value is a function, Mustache will execute the function with no arguments, and with the function's special `this` variable set to the view object. Mustache will then insert the returned value into the output. You can see an example of this in `pbs73b.html` where the view objects define a key named `languageList` which is a function that joins all the elements in the languages array into a single string and then returns it.
 
@@ -288,11 +288,11 @@ The template `vars_tpl1` in `pbs73b.html` illustrates all of the above:
 
 ## Sections in Mustache Templates
 
-**Note:** this section was revised to improve its wording when working on the next instalment. The matching podcast episode does not use the term _template key_.
+_**Note:** this section was revised to improve its wording when working on the next instalment. The matching podcast episode does not use the term **template key**_.
 
 Within a Mustache template, a section is a part of the template between special starting and ending Mustache tags. You can use sections in two ways — to conditionally include parts of your template in the output, or to loop parts of your template so they appear multiple times in the output.
 
-A section is controlled by a variable (a key within the view object). The name of the variable is used both to start and end the section. To start a section, prefix the variable name with the `#` symbol inside a _mustache_, and to end it, prefix the same variable name with a `/` inside the _mustache_. For example, if we had a key named `boogers` in our view object, then we would start a section controlled by the value of `boogers` with `{{#boogers}}`, and end the section with `{{/boogers}}`.
+A section is controlled by a variable (a key within the view object). The name of the variable is used both to start and end the section. To start a section, prefix the variable name with the `#` symbol inside a _mustache_, and to end it, prefix the same variable name with a `/` inside the _mustache_. For example, if we had a key named `boogers` in our view object, then we would start a section controlled by the value of `boogers` with `{% raw %}{{#boogers}}{% endraw %}`, and end the section with `{% raw %}{{/boogers}}{% endraw %}`.
 
 The Mustache documentation describes the variable controlling a section as the _section key_.
 
