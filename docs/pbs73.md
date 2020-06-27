@@ -93,16 +93,13 @@ The script tag above will add the Mustache API into the global name space as `Mu
 Let’s see it in action with a very simple example (copy and paste into the JavaScript console on any page that has imported the Mustache API, e.g. `pbs73a.html` from the ZIP file):
 
 ```javascript
+{% raw %}
 const greetingTpl = "Hi there {{name}} the {{nationality}}!";
 const personView1 = {
   name: 'Bart',
   nationality: 'Belgian'
 };
 console.log(Mustache.render(greetingTpl, personView1));
-```
-```javascript
-{% raw %}
-Hello, my name is {{name}}.
 {% endraw %}
 ```
 
