@@ -256,7 +256,7 @@ $btn.click(function(){
 });
 ```
 
-At this stage we have a working solution, but it would benefit form a little refactoring. As things stand there’s a lot of code duplication between the timeout that fires when the timer ends and the `stopTimer()` function. This can be easily fixed by replacing the duplicated code in the timeout with a call to the `stopTimer()` function:
+At this stage we have a working solution, but it would benefit from a little refactoring. As things stand there’s a lot of code duplication between the timeout that fires when the timer ends and the `stopTimer()` function. This can be easily fixed by replacing the duplicated code in the timeout with a call to the `stopTimer()` function:
 
 ```javascript
 mainTimerID = window.setTimeout(function(){
