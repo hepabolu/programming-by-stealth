@@ -100,6 +100,11 @@ const personView1 = {
 };
 console.log(Mustache.render(greetingTpl, personView1));
 ```
+```javascript
+{% raw %}
+Hello, my name is {{name}}.
+{% endraw %}
+```
 
 The above will log:
 
