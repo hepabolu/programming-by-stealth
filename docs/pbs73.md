@@ -112,12 +112,14 @@ As you can see, Mustache uses double curly braces as its delimiter, hence the na
 Because Mustache was built with the web in mind, it takes care of HTML escaping special character for you. You can see this automatic escaping in action with this simple example:
 
 ```javascript
+{% raw %}
 const mottoTpl = 'As {{name}} says "{{motto}}"';
 const personView2 = {
   name: 'Bart',
   motto: "live & learn!"
 };
 console.log(Mustache.render(mottoTpl, personView2));
+{% endraw %}
 ```
 
 The above will log:
@@ -127,12 +129,14 @@ The above will log:
 This is usually what you want, but not always. You can disable HTML escaping by using triple curly braces:
 
 ```javascript
+{% raw %}
 const unEscapedMottoTpl = 'As {{{name}}} says "{{{motto}}}"';
 const personView3 = {
   name: 'Bart',
   motto: "live & learn!"
 };
 console.log(Mustache.render(unEscapedMottoTpl, personView3));
+{% endraw %}
 ```
 
 The above will log:
@@ -162,10 +166,12 @@ In the main body of the file, you’ll find a placeholder `<div>` into which the
 Near the bottom of the file, you’ll find the template definition:
 
 ```html
+{% raw %}
 <!-- Define the Template String -->
 <script type="text/html" id="pbs73_tpl">
   <p>As {{name}} the {{nationality}} would say, "{{motto}}"</p>
 </script>
+{% endraw %}
 ```
 
 You’ll find the view object defined in the global scope inside a regular script tag:
@@ -262,20 +268,22 @@ const allison = {
 
 As we’ve already seen, you can include the value of a key within the view by enclosing its name in a _mustache_.
 
-In our examples so far, the view objects have been very simplistic — just simple collections of name-value pairs where each value is a string. In the real world, your views will be more complex than that. The values do not have to be strings! They can of course be numbers or booleans too, but they can also be objects. You’ll notice that in our example views the names are not single strings, but nested objects indexed by `'first'` and `'last'`. How do we include the first name in our template? Simple, we use JavaScript’s dot notation. We can get the first name with `'{{name.first}}'` and the last name with `'{{name.last}}'`.
+In our examples so far, the view objects have been very simplistic — just simple collections of name-value pairs where each value is a string. In the real world, your views will be more complex than that. The values do not have to be strings! Of course, they can be numbers or booleans too, but they can also be objects. You’ll notice that, in our example views, the names are not single strings, but nested objects indexed by `'first'` and `'last'`. How do we include the first name in our template? Simple, we use JavaScript’s dot notation. We can get the first name with `{% raw %}'{{name.first}}'{% endraw %}` and the last name with `{% raw %}'{{name.last}}'{% endraw %}`.
 
 We can use the same technique to access properties within any object, even built-in objects like arrays. Our sample views define an array of strings named `languages`. We can access the number of languages the person speaks with `'{{languages.length}}'`.
 
-A value in a view can also be a function. When you try to add a value to a template, and that value is a function, Mustache will execute the function with no arguments, and the function's special `this` variable set to the view object, and insert the returned value into the output. You can see an example of this in `pbs73b.html` where the view objects define a key named `languageList` which is a function that joins all the elements in the languages array into a single string and then returns it.
+A value in a view can also be a function. When you try to add a value to a template, and that value is a function, Mustache will execute the function with no arguments, and with the function's special `this` variable set to the view object. Mustache will then insert the returned value into the output. You can see an example of this in `pbs73b.html` where the view objects define a key named `languageList` which is a function that joins all the elements in the languages array into a single string and then returns it.
 
 The template `vars_tpl1` in `pbs73b.html` illustrates all of the above:
 
 ```html
+{% raw %}
 <!-- Demo 1: Variables -->
 <script type="text/html" id="vars_tpl1">
   <p>{{name.first}} {{name.last}} is {{nationality}} and {{pronoun}} produces {{podcasts.length}} podcasts.</p>
   <p>{{name.first}} speaks: {{languageList}}</p>
 </script>
+{% endraw %}
 ```
 
 ## Sections in Mustache Templates
@@ -299,6 +307,7 @@ You can invert the logic of a conditional section by using a `^` instead of a `#
 You can combine these types of section to create if/else logic in your templates. You can see an example of this in `cond_tpl1` in `pbs73b.html`.
 
 ```html
+{% raw %}
 <!-- Demo 2: Conditional Sections -->
 <script type="text/html" id="cond_tpl1">
   <p>
@@ -310,6 +319,7 @@ You can combine these types of section to create if/else logic in your templates
     {{/facebook}}
   </p>
 </script>
+{% endraw %}
 ```
 
 ### Looped Sections
@@ -319,6 +329,7 @@ If the variable controlling a section is a non-empty array, then the section wil
 You can see both a loop over an array of strings and a loop over an array of objects in `loop_tpl1` in the file `pbs73b.html`.
 
 ```html
+{% raw %}
 <!-- Demo 3: Looped Sections -->
 <script type="text/html" id="loop_tpl1">
   <p>{{name.first}} Speaks the following languages:</p>
@@ -337,6 +348,7 @@ You can see both a loop over an array of strings and a loop over an array of obj
     {{/podcasts}}
   </ul>
 </script>
+{% endraw %}
 ```
 
 ## A Challenge
