@@ -288,7 +288,7 @@ The template `vars_tpl1` in `pbs73b.html` illustrates all of the above:
 
 ## Sections in Mustache Templates
 
-_**Note:** this section was revised to improve its wording when working on the next instalment. The matching podcast episode does not use the term **template key**_.
+_**Note:** this section was revised to improve its wording when working on the next instalment. The matching podcast episode does not use the term **template key**._
 
 Within a Mustache template, a section is a part of the template between special starting and ending Mustache tags. You can use sections in two ways — to conditionally include parts of your template in the output, or to loop parts of your template so they appear multiple times in the output.
 
