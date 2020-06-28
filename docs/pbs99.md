@@ -1,6 +1,6 @@
-# PBS 98 of X — Building with Classes Part 2: *Is-A*
+# PBS 99 of X — Building with Classes Part 2: *Is-A*
 
-In this instalment we're wrapping up our third look at Object Oriented (OO) programming in JavaScript. In the previous instalment we introduced the idea that defining relationships between classes allows for the construction of object oriented code for representing complex concepts and things in our code. If a class represents a concept or thing, then a collection of related classes can represent a collection of related concepts and things. As mentioned in the previous instalments, there are two ways in which classes can be related to each other. The simplest by far is the so-called *has-a* relationship. This is simply the situation where instance of one class have instances of another as data attributes. This instalment is dedicated to the second type of relationship, the so-called *is-a* relationship, the mechanism for which is the OO concept of *class inheritance*. Using inheritance we can build hierarchies of classes, and in so doing, remove a lot of duplication, and make our code easier to write and maintain, and easier to build on. Inheritance really is at the very heart of good object oriented design.
+In this instalment we're wrapping up our third look at Object Oriented (OO) programming in JavaScript. In the previous instalment we introduced the idea that defining relationships between classes allows for the construction of object oriented code for representing complex concepts and things in our code. If a class represents a concept or thing, then a collection of related classes can represent a collection of related concepts and things. As mentioned in the previous instalments, there are two ways in which classes can be related to each other. The simplest by far is the so-called *has-a* relationship. This is simply the situation where instances of one class have instances of another as data attributes. This instalment is dedicated to the second type of relationship, the so-called *is-a* relationship, the mechanism for which is the OO concept of *class inheritance*. Using inheritance we can build hierarchies of classes, and in so doing, remove a lot of duplication, and make our code easier to write and maintain, and easier to build on. Inheritance really is at the very heart of good object oriented design.
 
 We're also going to meet a very misunderstood word — *polymorphism*. This is one of those words that sounds way more complicated than it actually is.
 
@@ -25,11 +25,11 @@ You can also <a href="" >Download the MP3</a>
 
 ## Class Inheritance
 
-Imagine you were writing a class to represent the people in a company. You would have managers and workers. As you started to implement these two classes you'd soon realise that while there are many differences, for example, managers have people reporting to them, workers don't, there are also many similarities. Like workers managers have names, genders, ages, and so on.
+Imagine you were writing a class to represent the people in a company. You would have managers and workers. As you started to implement these two classes you'd soon realise that while there are many differences, for example, managers have people reporting to them, workers don't, there are also many similarities. Like workers and managers have names, genders, ages, and so on.
 
 By this stage in the series I hope you can recognise the kind of code duplication that implementing these two classes separately would require as being a so-called *bad smell*. Code duplication should always be a signal to stop and think — am I doing this right?
 
-The root-cause of this code duplication is that both managers and workers can be described in terms of a more generic concept — they are both people!
+The root cause of this code duplication is that both managers and workers can be described in terms of a more generic concept — they are both people!
 
 The solution to this code duplication is to start by creating a class that captures everything managers and workers have in common, and then to build two new classes that inherit everything from the first, and only implement the things that are unique to managers and workers.
 
@@ -49,7 +49,7 @@ As you can see, we are starting to build a tree-like structure with ever expandi
 
 ### The *is-a* Relationship
 
-Every link in an inheritance tree is an *is-a* relationship. So, we can say that a manager *is an* employee, and and employee *is a* person. However, we can merge connected links in the tree together, and we can also say that a manager *is a* person. So, there exists a direct or indirect *is-a* relationship between a class and ever class between it and the root of the inheritance tree.
+Every link in an inheritance tree is an *is-a* relationship. So, we can say that a manager *is an* employee, and an employee *is a* person. However, we can merge connected links in the tree together, and we can also say that a manager *is a* person. So, there exists a direct or indirect *is-a* relationship between a class and every class between it and the root of the inheritance tree.
 
 ## What Inheritance Gives Us
 
@@ -65,7 +65,7 @@ Our journey towards OO started with the concept of encapsulation — a single ob
 
 The same model holds true with inheritance, but you should imagine a production line of constructors each adding their pieces of data and copying in their functions. This process does not start with the child class, but with the parent class at the very top of the hierarchy. If class `C` extends class `B` which extends class `A`, and you call the constructor for class `C`, that's actually the last constructor to get called! The first constructor to add data and functions will be the constructor for `A`, then the constructor for `B`, and only then does the constructor you directly called get to do its thing!
 
-This ordering is very important, because it explains what happens when there is a conflict. I classes `A`, `B`, and `C` all provide an instance function named `.d()` that each do something different, which `.d()` ends up in the final encapsulated object outputted by the constructor? Simply put — the last constructor to execute wins!
+This ordering is very important, because it explains what happens when there is a conflict. If classes `A`, `B`, and `C` all provide an instance function named `.d()` that each do something different, which `.d()` ends up in the final encapsulated object output by the constructor? Simply put — the last constructor to execute wins!
 
 When a child class replaces functionality provided by a parent class it is said to *override* the parent class's functionality.
 
@@ -75,11 +75,11 @@ You can also see how default functionality can be provided — if a parent class
 
 You might imagine that in this case, you as a programmer have to decide whether to eat your cake or have it — do you take the functionality from your parent class, or do you implement your own? In most OO programming languages that's not actually a choice you have to make! While the mechanism varies from language to language, there is generally a mechanism for accessing the original version of an overridden function from within a child class. Many languages (including JavaScript) implement this by using the `super` keyword for this.
 
-The final feature provided by inheritance is the ability to set constraints, to specify that every child class must implement a given instance of class function. Languages vary widely in their support for this feature, some have very rigid enforcement, usually with the keyword `abstract`, and some have no actual enforcement all, relying on agreed convention or creative hackery instead. Sadly, JavaScript falls into the latter category 🙁
+The final feature provided by inheritance is the ability to set constraints, to specify that every child class must implement a given instance of class functions. Languages vary widely in their support for this feature, some have very rigid enforcement, usually with the keyword `abstract`, and some have no actual enforcement all, relying on agreed convention or creative hackery instead. Sadly, JavaScript falls into the latter category 🙁
 
 ## Inheritance in JavaScript
 
-For the most part inheritance in JavaScript ES6 and beyond is very straight forward and works pretty much as you would expect. The one glaring short-coming being the complete lack of support for specifying constraints on child classes. There is a work-around, but it's a little kludgy!
+For the most part inheritance in JavaScript ES6 and beyond is very straightforward and works pretty much as you would expect. The one glaring shortcoming being the complete lack of support for specifying constraints on child classes. There is a work-around, but it's a little kludgy!
 
 ### The  `extends` Keyword
 
@@ -107,31 +107,31 @@ The `super` keyword has three different meanings depending on context:
 
 1. Within a child class's constructor, `super()` is used to execute the parent class's constructor. There are some important subtleties in how this works, so put a pin in this for a few minutes!
 2. Within the child class's class functions `super` is a reference to the parent class, providing access to all the class functions and class data attributes the parent class defines, regardless of whether or not the child class chooses to override them.
-3. Within the child class's instance functions `super` refers to the instance itself, but as it was before it overrode any instance functions provided by the parent class. This sounds a little strange, but it acts as a mechanism for by-passing function overriding.
+3. Within the child class's instance functions `super` refers to the instance itself, but as it was before it overrode any instance functions provided by the parent class. This sounds a little strange, but it acts as a mechanism for bypassing function overriding.
 
 ### The `super` Keyword Within Constructors
 
 Let's return to the subtleties of using the `super()` keyword within constructors.
 
-Within a child class's constructor `super()` is a reference to the parent class's constructor. You call it like a function, and can pass it any arguments you wish.
+Within a child class's constructor, `super()` is a reference to the parent class's constructor. You call it like a function, and can pass it any arguments you wish.
 
-There are however two important rules when it comes to using `super()` within constructors. Firstly, **you must call `super()` within a child class's constructor**. This makes sense because if you don't there would be no mechanism by which the instance data attributes provided by the parent class could get initialised. Secondly, **you can't use the `this` keyword before you call `super()`**.
+There are, however, two important rules when it comes to using `super()` within constructors. Firstly, **you must call `super()` within a child class's constructor**. This makes sense because if you don't there would be no mechanism by which the instance data attributes provided by the parent class could get initialised. Secondly, **you can't use the `this` keyword before you call `super()`**.
 
 ### Working Around the Lack of an `abstract` Keyword
 
 Many languages provide a mechanism for parent classes to specify functions all child classes must implement. In such languages, trying to extend a class without implementing the required functions will result in a compiler error. This means programmers can be guaranteed that every child class will provide a given function.
 
-JavaScript simply does not provide this functionality. There is no JavaScript version of Java's `abstract` keyword. We can't even fully fake it 🙁
+JavaScript simply does not provide this functionality. There is no JavaScript version of Java's `abstract` keyword. We can't even fully fake it. 🙁
 
 The best we can do is work around this shortcoming by implementing a default version of the function in the parent class that always throws an error. If the child class doesn't override the function the error will get thrown, if the child class does override the function it won't.
 
-### Inheritance and the `instanecof` Operator
+### Inheritance and the `instanceof` Operator
 
-JavaScript's `instanceof` operator is aware of inheritance. If class `B` extends class `A`, and object `b` is an instance of class `B`, them both of the following will evaluate to `true`:
+JavaScript's `instanceof` operator is aware of inheritance. If class `B` extends class `A`, and object `b` is an instance of class `B`, then both of the following will evaluate to `true`:
 
 ```js
 b instanceof A;
-b in stanceof B;
+b instanceof B;
 ```
 
 ## A Worked Example — Monetary Amounts Revisited
@@ -142,7 +142,7 @@ As a quick reminder, we chose to model monetary amounts using three interrelated
 
 There were two *has-a* relationships between those classes — monetary amounts had a currency, and currencies had one or two denominations.
 
-Our `Currency` class from the previous instalment can not be used to represent currencies with more than two denominations. If you're a Harry Potter fan and want to implement Wizarding Money, you're out of luck because J.K. Rowling's wizards use Gallions, which divide into Sickles, which divide into Knuts. Similarly, Star Trek fans know the Frengi use Gold Pressed Latinum as their currency, and it consists of Bars, which divide into Strips, which divid into Slips.
+Our `Currency` class from the previous instalment cannot be used to represent currencies with more than two denominations. If you're a Harry Potter fan and want to implement Wizarding Money, you're out of luck because J.K. Rowling's wizards use Gallions, which divide into Sickles, which divide into Knuts. Similarly, Star Trek fans know the Ferengi use Gold-Pressed Latinum as their currency, and it consists of Bars, which divide into Strips, which divide into Slips.
 
 What we need is another class to represent this other type of currency, but that class would share a lot of code with our existing class.
 
@@ -154,7 +154,7 @@ The functionality shared by `DecimalCurrency` and `DenominatedCurrency` was move
 
 This set up two *is-a* relationships — `DecimalCurrency` is a `Currency`, and `DenominatedCurrency` is a `Currency`.
 
-As you can see, the code in `money.js` is long! The intention is not to go through every line of the fine in detail, but instead, to focus on a few highlights that serve to illustrate important concepts. I commented the code heavily in the hope that it would make sense by itself.
+As you can see, the code in `money.js` is long! The intention is not to go through every line of the file in detail, but instead, to focus on a few highlights that serve to illustrate important concepts. I commented the code heavily in the hope that it would make sense by itself.
 
 Note that the code in `money.js` assumes that three open-source libraries have been loaded before loading `money.js`:
 
@@ -169,10 +169,10 @@ Finally, note that the `Denomination` and `MonetaryAmount` classes are completel
 Let's start with the very big picture — we'll be implementing the following three classes:
 
 1. `Currency` — the parent class for all currency types.
-2. `DecimalCurrency` — a child class of `Currency` representing the typical currencies we use in the modern world, usually with 2 denominations (like Sterling with Pounds & Pence, and the US Dollar with Dollars Cents), but occasionally with just one (like the Japanese Yen).
+2. `DecimalCurrency` — a child class of `Currency` representing the typical currencies we use in the modern world, usually with 2 denominations (like Sterling with Pounds & Pence, and the US Dollar with Dollars & Cents), but occasionally with just one (like the Japanese Yen).
 3. `DenominatedCurrency` — a child class of `Currency` representing currencies with arbitrarily many denominations like those commonly seen in various fictional genres like sci-fi & fantasy.
 
-This simple class hierarchy (one parent two children) is created with the following class definitions:
+This simple class hierarchy (one parent, two children) is created with the following class definitions:
 
 ```js
 class Currency{
@@ -190,7 +190,6 @@ class DenominatedCurrency extends Currency{
 
 Before we go any further, let's look in detail at the contents of these three classes:
 
-Let's take a closer look at the structure our three classes:
 1. The parent class `Currency` provides:
 	* The shared class  function `static coerceAmount(amount)`
 	* The shared class function `static amountAsHumanInt(amount)`
@@ -200,7 +199,7 @@ Let's take a closer look at the structure our three classes:
 	* A constructor
 	* The default instance function `amountAsHumanFloat(amount)`
 	* The default instance function `splitAmount(amount)`
-	* The requirement that all child-classes provide an instance function `amountAsString(amount)` (i.e. and *abstract* instance function)
+	* The requirement that all child-classes provide an instance function `amountAsString(amount)` (i.e. an *abstract* instance function)
 	* The requirement that all child-classes provide an instance function `amountAsHumanString(amount)` (i.e. and *abstract* instance function)
 	* The requirement that all child-classes provide an instance function `amountAsEnglishString(amount)` (i.e. and *abstract* instance function)
 2. The child class `DecimalCurrency` Provides:
@@ -258,22 +257,22 @@ const wizardingMoney = new DenominatedCurrency({
 
 #### 1. Shared Functionality
 
-The class `Currency` defines a class function `coerceAmount(amount)` and this function is not re-defined in either of the child classes.
+The class `Currency` defines a class function `coerceAmount(amount)` and this function is not redefined in either of the child classes.
 
 As expected, it continues to work when called on the parent class:
 
 ```js
 console.log(Currency.coerceAmount("42")); // 42
-console.log(Currency.coerceAmount("boggers")); // throws TypeError
+console.log(Currency.coerceAmount("boogers")); // throws TypeError
 ```js
 
 Thanks to inheritance, both child classes got a copy of this function automatically:
 
 ```js
 console.log(DecimalCurrency.coerceAmount("42")); // 42
-console.log(DecimalCurrency.coerceAmount("boggers")); // throws TypeError
+console.log(DecimalCurrency.coerceAmount("boogers")); // throws TypeError
 console.log(DenominatedCurrency.coerceAmount("42")); // 42
-console.log(DenominatedCurrency.coerceAmount("boggers")); // throws TypeError
+console.log(DenominatedCurrency.coerceAmount("boogers")); // throws TypeError
 ```
 
 The class `Currency` defines a getter and setter for the instance data attribute `name`, and these getters and setters are not re-defined in either child class. Again, the attribute exists on instances of the parent class as expected, but also on instances of the child classes:
@@ -346,11 +345,11 @@ const jordanianDinar = new DecimalCurrency({
 console.log(jordanianDinar.amountAsHumanFloat(1234.5678)); // 1,234.568
 ```
 
-The `DenomimnatedCurrency` class also overrides the default `.amountAsHumanFloat()` instance function, so what purpose does it serve?
+The `DenominatedCurrency` class also overrides the default `.amountAsHumanFloat()` instance function, so what purpose does it serve?
 
 The obvious first answer is that just because two sub-classes choose to override a default does not mean a third, fourth, or one millions sub-class won't!
 
-But, there is a more nuanced answers — notice that the version of the function defined in the `DecimalCurrency` class calls the default version provided by the parent class in the special case where the amount is an integer. It does so using the `super` keyword. The same is true of the implementation of this function in the `DenominatedCurrency` class too BTW.
+But, there is a more nuanced answers — notice that the version of the function defined in the `DecimalCurrency` class calls the default version provided by the parent class in the special case where the amount is an integer. It does so using the `super` keyword. The same is true of the implementation of this function in the `DenominatedCurrency` class too by the way.
 
 #### 3. Requirements Child Classes Must Meet
 
@@ -402,7 +401,7 @@ class BadCurrency extends Currency{
   }
 };
 
-// try use the abstract .length property
+// try to use the abstract .length property
 const naughtyMoney = new BadCurrency();
 console.log(naughtyMoney.length); // throws error
 ```
@@ -443,7 +442,7 @@ Remember the two rules when it comes to `super()` in child class constructors:
 1. You **must** call `super()`
 2. You cannot use `this` before you call `super()`
 
-When you use a dictionary to contain all your constructor arguments you usually simply call `super()` on the first line of the constructor and pass it the one dictionary argument. Once that's done you initialise the instance data attributes that are unique to the sub-class, knowing the parent class's constructor has taken care of the rest. The constructor in the `DecimalCurrency` class follows this model:
+When you use a dictionary to contain all your constructor arguments you usually simply call `super()` on the first line of the constructor and pass it the one dictionary argument. Once that's done you initialise the instance data attributes that are unique to the subclass, knowing the parent class's constructor has taken care of the rest. The constructor in the `DecimalCurrency` class follows this model:
 
 ```js
 class DecimalCurrency extends Currency{
@@ -508,7 +507,7 @@ class DenominatedCurrency extends Currency{
 
 ### Inheritance,  `instanceof` Operator & Polymorphism
 
-At the top of the worked example I mentioned that the code for the `Denomination` and `MonetaryAmount` classes were un-changed since the previous instalment. That means that `MonetaryAmount` is expecting to work with instances of the class `Currency`, can it use instances of `DecimalCurrency` or `DenominatedCurrency`?
+At the top of the worked example I mentioned that the code for the `Denomination` and `MonetaryAmount` classes were unchanged since the previous instalment. That means that `MonetaryAmount` is expecting to work with instances of the class `Currency`, can it use instances of `DecimalCurrency` or `DenominatedCurrency`?
 
 Let's find out!
 
@@ -539,8 +538,8 @@ console.log(`We just got a loan of ${infrastructureLoan.asHumanString()}!`);
 // logs: We just got a loan of 元42,000,000!
 
 const quarksTab = new MonetaryAmount(42.7, latinum);
-console.log(`My bar tab at Qurarks is now ${quarksTab.asEnglishString()}!`);
-// logs: My bar tab at Qurarks is now 42 Bars & 14 Strips!
+console.log(`My bar tab at Quark's is now ${quarksTab.asEnglishString()}!`);
+// logs: My bar tab at Quark's is now 42 Bars & 14 Strips!
 ```
 
 Why does this work?
@@ -591,7 +590,7 @@ Gold Pressed Latinum:
 
 So, we can say that the Renminbi is a decimal currency, and it is also a currency, hence the *is-a* relationship between the `DecimalCurrency` and `Currency` classes.
 
-The important take-away is that instance of child classes can be used anywhere instances of the parent class can be used. In this example, the `MonetaryAmount` class can work with many (*poly*) forms (*morph*) of currency, hence the often confusing piece of programming jargon *polymorphism*.
+The important take-away is that instances of child classes can be used anywhere instances of the parent class can be used. In this example, the `MonetaryAmount` class can work with many (*poly*) forms (*morph*) of currency, hence the often confusing piece of programming jargon *polymorphism*.
 
 **When programmers talk about *polymorphism* they're simply referring to the fact that instances of child classes can be used anywhere instances of their parent class can be used!**
 
