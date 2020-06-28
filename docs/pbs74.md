@@ -1,6 +1,6 @@
 # PBS 74 of X — More Mustaches
 
-In [the previous instalment](https://bartificer.net/pbs73) we got our first look at [Mustache templates](http://mustache.github.io). In this instalment we’ll finish our look at this handy little third-party library with a look at some of Mustache’s more advanced features. This will set us up perfectly to finally introduce AJAX into this series. This is an extremely common technique for fetching external resources with JavaScript. We’ll learn how to use AJAX to fetch both Mustache template strings and JSON data from URLs.
+In [the previous instalment](https://pbs.bartificer.net/pbs73) we got our first look at [Mustache templates](http://mustache.github.io). In this instalment we’ll finish our look at this handy little third-party library with a look at some of Mustache’s more advanced features. This will set us up perfectly to finally introduce AJAX into this series. This is an extremely common technique for fetching external resources with JavaScript. We’ll learn how to use AJAX to fetch both Mustache template strings and JSON data from URLs.
 
 You can [download this instalment’s ZIP file here](https://www.bartbusschots.ie/s/wp-content/uploads/2019/03/pbs74.zip) or [here on GitHub](https://cdn.jsdelivr.net/gh/bbusschots/pbs-resources/instalmentZips/pbs74.zip).
 
@@ -14,7 +14,7 @@ You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/n
 
 ## PBS 73 challenge Solution
 
-The challenge set at the end of the previous instalment was quite straightforward, rewrite the simple timer app we’ve been working on for the past few challenges so that it uses Mustache templates rather than the HTML5 `<template>` tag.
+The challenge set at the end of the previous instalment was quite straightforward: rewrite the simple timer app we’ve been working on for the past few challenges so that it uses Mustache templates rather than the HTML5 `<template>` tag.
 
 The first thing to do was to load the Mustache library into the document:
 
