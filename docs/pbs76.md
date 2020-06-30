@@ -437,7 +437,7 @@ A lot to absorb, but let's step through it like we did with the `.match()` RE ea
 
 Notice the first part of the RE is identical to what we had before. It matches the start of the string followed by `http://` or `https://` using a non-capturing group to make the `s` optional. This is important, because it means the `s` is not in `$1`. If we’d just used regular parentheses, we’d have created a capturing group. Then the matched value, `'s'` or an empty string in this case, would have been stored in `$1`.
 
-We then match the string `'stackoverflow.com/users/'`, remembering to escape the `/` characters with `\/`, and using the character class `[.]` to represent an actual period symbol. Remember, were it not in the character class, the `.` would mean _‘any single character’_. Then we match one or more digits followed by a `/` with `/\d+\/`. Next comes the really important part — the capture group for the username: `(.+)`. Remember, `.` means _‘any character’_, `+` means _‘one or more’_, and parentheses create a capture group. So we are capturing one or more of any character, and storing that value in the first capture group, which we can access in the replacement string as `$1`. We don’t want to include the trailing ?tab=profile in the capture group. So we have to match that outside the parentheses. Because `?` means _‘zero or one’_, I use the character class `[?]` to match the actual question mark symbol, and `$` means `'end of string'`. Finally, the replacement string (second argument to `.replace()`)is simply `'$1'`, i.e. the contents of the first (and only) capture group.
+We then match the string `'stackoverflow.com/users/'`, remembering to escape the `/` characters with `\/`, and using the character class `[.]` to represent an actual period symbol. Remember, were it not in the character class, the `.` would mean _‘any single character’_. Then we match one or more digits followed by a `/` with `/\d+\/`. Next comes the really important part — the capture group for the username: `(.+)`. Remember, `.` means _‘any character’_, `+` means _‘one or more’_, and parentheses create a capture group. So we are capturing one or more of any character, and storing that value in the first capture group, which we can access in the replacement string as `$1`. We don’t want to include the trailing ?tab=profile in the capture group. So we have to match that outside the parentheses. Because `?` means _‘zero or one’_, I use the character class `[?]` to match the actual question mark symbol, and `$` means `'end of string'`. Finally, the replacement string (second argument to `.replace()`) is simply `'$1'`, i.e. the contents of the first (and only) capture group.
 
 Putting it all together I created two lookup tables, one defining functions for transforming the raw values (the keys from `data.people.allison.contact` and `data.people.bart.contact`) into URLs, and one for transforming them into meaningful text for the links. I added my lookup tables into the `data` object for easy access:
 
@@ -541,7 +541,7 @@ Note that I’ve made the icon large using the `h1` Bootstrap utility class.
 
 Also note that the existence of the `icon` partial has saved me from some code duplication.
 
-We’re now ready to make the flex container switch from vertical stacking to horizontal stacking from the `md` breakpoint up. We do this by adding the Bootstrap flex utility class `flex-md-row`. To allow any icons with long text to flow onto a possible extra row if needed, we add `flex-md-wrap`, and to align the items nicely we add `justify-content-md-between`.
+We’re now ready to make the flex container switch from vertical stacking to horizontal stacking from the `md` breakpoint up. We do this by adding the Bootstrap flex utility class `flex-md-row`. To allow any icons with long text to flow onto a possible extra row if needed, we add `flex-md-wrap`. To align the items nicely, we add `justify-content-md-between`.
 
 We’re almost there, but we still need to centre the icons and text, and also centre the heading containing the person’s name. We can do all this with the responsive Bootstrap utility class `text-md-center`.
 
@@ -571,13 +571,13 @@ Putting it all together, my updated template becomes:
 
 ## AJAX — Asynchronous HTTP Requests with JavaScript
 
-AJAX is technically an acronym; _Asynchronous JavaScript and XML_. Don’t get too hung up on this though. The XML part isn’t really relevant to our experience of actually using AJAX as a JavaScript developer. The two words within that _backronym_ that really do matter are `Asynchronous` and `JavaScript`.
+AJAX is technically an acronym: _Asynchronous JavaScript and XML_. Don’t get too hung up on this though. The XML part isn’t really relevant to our experience of actually using AJAX as a JavaScript developer. The two words within that _backronym_ that really do matter are `Asynchronous` and `JavaScript`.
 
 The JavaScript part is obvious, but the _asynchronous_ part may not be.
 
 When a chunk of code executes synchronously, each statement happens in turn, one after the other, starting with the first and ending with the last. Synchronously executing code always happens in the same order, one line after the next line, after the next. No two lines of synchronous code are ever executing at the same time.
 
-Synchronous code is easy to write, easy to understand, and makes up the vast bulk of our code. However, there are times when synchronicity becomes problematic, and network IO (input/output) is a classic example of this. Another term for describing synchronous IO is _blocking IO_. Simply put, in computer time, it takes an absolute eon to get a response from a web server. If you execute such requests synchronously then they block execution of the rest of your code while they wait. If we used blocking IO for HTTP requests in JavaScript, we’d end up with utterly unusable web apps that repeatedly hang for seconds at a time! Simply put, synchronous network IO does not work!
+Synchronous code is easy to write, easy to understand, and makes up the vast bulk of our code. However, there are times when synchronicity becomes problematic. Network IO (input/output) is a classic example of this. Another term for describing synchronous IO is _blocking IO_. Simply put, in computer time, it takes an absolute eon to get a response from a web server. If you execute such requests synchronously then they block execution of the rest of your code while they wait. If we used blocking IO for HTTP requests in JavaScript, we’d end up with utterly unusable web apps that repeatedly hang for seconds at a time! Simply put, synchronous network IO does not work!
 
 If we can’t do things synchronously, then we have to do them asynchronously, or, to put it another way, we have to use non-blocking network IO when making using JavaScript to make HTTP requests.
 
@@ -676,7 +676,7 @@ You can see this AJAX call in action by saving `pbs76.html` from the ZIP file to
 
 Note that `https://www.bartbusschots.ie/utils/fakerWS` is a web service I wrote that uses the open-source [Faker](https://github.com/fzaninotto/Faker#fakerproviderbase) PHP module to generate random data of various different kinds. If you’re curious how my web service works, I’ve open-sourced the code. You can [get it on GitHub](https://github.com/bbusschots/faker-ws.php).
 
-As you can see, the first few options can be easily matched to what we learned last time about HTTP requests. The first one that doesn’t is `cache`. This is a very convenient jQuery feature that adds an HTTP query parameter named `_` with a random number as the value to the end of the URL. This forces the URL to be different each time, preventing all caching regardless of what your ISP may be doing to try save bandwidth.
+As you can see, the first few options can be easily matched to what we learned last time about HTTP requests. The first one that doesn’t is `cache`. This is a very convenient jQuery feature that adds an HTTP query parameter named `_` with a random number as the value to the end of the URL. This forces the URL to be different each time, preventing all caching regardless of what your ISP may be doing to save bandwidth.
 
 The `data` option allows you to specify name-value data pairs for sending to the server. When the method is `GET`, jQuery adds the data as query parameters. When the method is `POST`, it adds the data as form inputs.
 
