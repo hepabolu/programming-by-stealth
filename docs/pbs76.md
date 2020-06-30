@@ -113,7 +113,7 @@ Note that this partial makes use of a view variable named `icon` which is an obj
 
 <dt><code>title</code></dt>
 
-<dd>The text to use as the tooltip for sighted visitors, and the alternative text for screen readers.<dd>
+<dd>The text to use as the tooltip for sighted visitors, and the alternative text for screen readers.</dd>
 </dl>
 
 The icon consists of two parts; an `<i>` tag forms the visible icon and is hidden from screen readers with `aria-hidden="true"`, while a `<span>` provides a label that is visible only to screen readers with the `sr-only` class.
