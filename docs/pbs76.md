@@ -109,7 +109,7 @@ Note that this partial makes use of a view variable named `icon` which is an obj
 <dl>
 <dt><code>classes</code></dt>
 
-<dd>The CSS classes for the Font Awesome icon.<dd>
+<dd>The CSS classes for the Font Awesome icon.</dd>
 
 <dt><code>title</code></dt>
 
