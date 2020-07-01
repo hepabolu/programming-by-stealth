@@ -129,7 +129,7 @@ Imagine we needed to sort this array by surname ignoring case. We could do a lit
 
 Imagine then a few days later we find out we need to sort this same list by `displayName` (again ignoring case). We could copy-and-paste our first sorting function, find the line where we compare base on the `surname` property, and replace that with the `displayName` property. This is starting to smell bad!
 
-But things can quickly get smellier — next, imagine we need to sort based on the URL, but we want to ignore the www part, and again, ignore the case. As before, we can copy-and-paste our original function, find the line where we compare the values of the `surname` property, and replace it with the few lines of code needed to break apart the `url` property, extract the domain part, remove the www part if present, and then do the comparison.
+But things can quickly get smellier — next, imagine we need to sort based on the URL, but we want to ignore the `www` part, and again, ignore the case. As before, we can copy-and-paste our original function, find the line where we compare the values of the `surname` property, and replace it with the few lines of code needed to break apart the `url` property, extract the domain part, remove the `www` part if present, and then do the comparison.
 
 We now have three functions that are almost identical except for a few lines of code in the middle where they compare two values. We then find a bug in our implementation of Quick Sort. We now have to fix it in three places. This is a brittle solution, and definitely a _bad smell_ in software engineering terms. There must be a better way!
 
@@ -398,7 +398,7 @@ You’ll notice that the document ready handler now does the following:
 
 ## Callback Hell
 
-In this very simplistic example where we have just two AJAX requests in the entire page, and a very simply relationship between them, there is already a lot of work to do to coordinate the rendering of the contact cards. We needed to define a whole new function, and to move two variables out into the global scope. When you try to scale this approach to a more real world scenario where a page might make use of multiple templates and multiple data sources, this becomes utterly unwieldy very quickly! You simply end up with too many dependencies to keep in your mind at the same time. It’s literally fatiguing to code like that, and that’s before we get into the idea of having to maintain such complicated code. As bad as it is keeping these interdependencies straight in your mind while you write them, try debugging them six months or a year later!
+In this very simplistic example where we have just two AJAX requests in the entire page, and a very simple relationship between them, there is already a lot of work to do to coordinate the rendering of the contact cards. We needed to define a whole new function, and to move two variables out into the global scope. When you try to scale this approach to a more real world scenario where a page might make use of multiple templates and multiple data sources, this becomes utterly unwieldy very quickly! You simply end up with too many dependencies to keep in your mind at the same time. It’s literally fatiguing to code like that, and that’s before we get into the idea of having to maintain such complicated code. As bad as it is keeping these interdependencies straight in your mind while you write them, try debugging them six months or a year later!
 
 It’s these challenges that have lead to the \*callback hell\* moniker.
 
