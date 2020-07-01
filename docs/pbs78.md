@@ -343,7 +343,7 @@ The entire library is contained in one relatively small file. So you can downloa
 <script type="text/javascript" src="is.js"></script>
 ```
 
-Alternatively, you can load it form a CDN. There is no officially supported CDN, but many of the public JavaScript CDNs host the file. In my sample solution, I loaded is.js from the [Cloudflare-powered free CDNJS](https://cdnjs.com/about) with:
+Alternatively, you can load it from a CDN. There is no officially supported CDN, but many of the public JavaScript CDNs host the file. In my sample solution, I loaded is.js from the [Cloudflare-powered free CDNJS](https://cdnjs.com/about) with:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js" integrity="sha256-lnJeulOa3e5IO2EzHr8jKJ3CbT80MBwkS5a+n2ooIr4=" crossorigin="anonymous"></script>
