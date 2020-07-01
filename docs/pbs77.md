@@ -250,7 +250,7 @@ It sounds like the bonus credit is easy to earn: just do the same thing twice, b
 
 Interdependent AJAX calls definitely can be handled using callbacks. That’s how the web worked for years! But, it was always an unpleasant experience, hence the common complaint from web developers about being stuck in _callback hell_!
 
-I’m going to start with my sample solution to the actual challenge, and then I’m going to use my solution for the extra credit to illustrate callback hell. With that done, I can then share your salvation from callback hell, JavaScript promises!
+I’m going to start with my sample solution to the actual challenge, and then I’m going to use my solution for the extra credit to illustrate callback hell. With that done, I can then share your salvation from callback hell, JavaScript Promises!
 
 ### The Basic Solution
 
@@ -414,6 +414,6 @@ The design of the UI (user interface) and UX (user experience) are entirely up t
 
 ## Final Thoughts
 
-We’ve seen a hint of what callback hell might be like on a large project. Obviously, there must be a better way, and of course there is. Our route out of callback hell is a relatively new abstraction known as a _promise_. Initially promises were implemented as 3rd-party libraries ([bluebird](http://bluebirdjs.com/docs/getting-started.html) being a particularly popular one), but as of ECMAScript 2017 we now have an official implementation of promises in JavaScript. You might think the coming of official promises would mean the end of the 3rd-party implementations, but you’d be wrong. For various reasons you’ll still find a lot of 3rd-party implementations in use today. What’s happened instead is that all the implementations have coalesced around the official promises API, resulting in a new piece of jargon — _thenable_. Any object that’s compatible with the official JavaScript promises API is said to be a _thenable_ object. One of the places you’ll find thenables is in jQuery. Specifically, the `jqXHR` objects returned by `$.ajax()` are thenables!
+We’ve seen a hint of what callback hell might be like on a large project. Obviously, there must be a better way, and of course there is. Our route out of callback hell is a relatively new abstraction known as a _Promise_. Initially Promises were implemented as 3rd-party libraries ([bluebird](http://bluebirdjs.com/docs/getting-started.html) being a particularly popular one), but as of ECMAScript 2017 we now have an official implementation of Promises in JavaScript. You might think the coming of official Promises would mean the end of the 3rd-party implementations, but you’d be wrong. For various reasons you’ll still find a lot of 3rd-party implementations in use today. What’s happened instead is that all the implementations have coalesced around the official Promises API, resulting in a new piece of jargon — _thenable_. Any object that’s compatible with the official JavaScript Promises API is said to be a _thenable_ object. One of the places you’ll find thenables is in jQuery. Specifically, the `jqXHR` objects returned by `$.ajax()` are thenables!
 
-In the next instalment we’ll learn how to use promises to side-step callback hell and make our AJAX code easier to write and to maintain.
+In the next instalment we’ll learn how to use Promises to side-step callback hell and make our AJAX code easier to write and to maintain.
