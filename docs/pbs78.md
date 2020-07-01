@@ -131,7 +131,7 @@ Note that you may not always want to use such a broad brush. You may want to tre
 
 ### Triggers
 
-How a popover is activated is controlled by the `trigger` option. The default is `click`. When a popover is set to trigger on click, then clicking the element it’s attached to will show the popover. Clicking it again will hide it. I think of these kinds of popovers as being _sticky_, because I have to click again to make them go away.
+How a popover is activated is controlled by the `trigger` option. The default is `click`. When a popover is set to trigger on `click`, then clicking the element it’s attached to will show the popover. Clicking it again will hide it. I think of these kinds of popovers as being _sticky_, because I have to click again to make them go away.
 
 An alternative to this default behaviour is to set the trigger to `hover`. You can do this in HTML with the data attribute `data-trigger="hover"`. This behaviour may not make sense on a button, but it can be useful for other things. For example, the following link shows the meaning of the acronym as a popover triggered by hovering:
 
@@ -194,7 +194,7 @@ You’ll find a full list of all available options in the [relevant section of t
 
 <dt><code>placement</code></dt>
 
-<dd>The direction the popover should _‘pop’_. One of <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, or <code>auto</code>. The default is <code>auto</code>.</dd>
+<dd>The direction the popover should <em>'pop'</em>. One of <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, or <code>auto</code>. The default is <code>auto</code>.</dd>
 
 <dt><code>sanitize</code></dt>
 
@@ -343,7 +343,7 @@ The entire library is contained in one relatively small file. So you can downloa
 <script type="text/javascript" src="is.js"></script>
 ```
 
-Alternatively, you can load it from a CDN. There is no officially supported CDN, but many of the public JavaScript CDNs host the file. In my sample solution, I loaded is.js from the [Cloudflare-powered free CDNJS](https://cdnjs.com/about) with:
+Alternatively, you can load it form a CDN. There is no officially supported CDN, but many of the public JavaScript CDNs host the file. In my sample solution, I loaded is.js from the [Cloudflare-powered free CDNJS](https://cdnjs.com/about) with:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js" integrity="sha256-lnJeulOa3e5IO2EzHr8jKJ3CbT80MBwkS5a+n2ooIr4=" crossorigin="anonymous"></script>
