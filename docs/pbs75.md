@@ -166,8 +166,8 @@ When we run the command we get a lot of output!
 *  subject: CN=bartbusschots.ie
 *  start date: Mar  5 08:15:48 2019 GMT
 *  expire date: Jun  3 08:15:48 2019 GMT
-*  subjectAltName: host "www.bartbusschots.ie" matched cert's "www.bartbusschots.ie"
-*  issuer: C=US; O=Let's Encrypt; CN=Let's Encrypt Authority X3
+*  subjectAltName: host "www.bartbusschots.ie" matched cert\'s "www.bartbusschots.ie"
+*  issuer: C=US; O=Let\'s Encrypt; CN=Let\'s Encrypt Authority X3
 *  SSL certificate verify ok.
 > POST /utils/httpEcho/text?p1=param1Val&p2=param2Val HTTP/1.1
 > Host: www.bartbusschots.ie
