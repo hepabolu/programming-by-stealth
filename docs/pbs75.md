@@ -171,7 +171,8 @@ When we run the command we get a lot of output!
 *  SSL certificate verify ok.
 > POST /utils/httpEcho/text?p1=param1Val&p2=param2Val HTTP/1.1
 > Host: www.bartbusschots.ie
-> User-Agent: curl/7.54.0```
+> User-Agent: curl/7.54.0
+```
 
 real stuff follows:
 ```shell
