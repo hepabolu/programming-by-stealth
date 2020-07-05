@@ -188,11 +188,11 @@ To allow Promises of all kinds to coexist in harmony, JavaScript’s Promise fun
 
 A Promise is an object that permanently represents the outcome of an asynchronous task. A Promise starts off as a kind of digital IOU representing a future outcome, and then transforms into a permanent record of that outcome.
 
-Formally, a Promise in _IOU-mode_ is _unresolved_. When the asynchronous task completes, the Promise will move into one of two permanent states — if the task completed successfully the Promise becomes _resolved_, and if it failed, the Promise becomes _rejected_.
+Formally, a Promise in _IOU-mode_ is _unresolved_. When the asynchronous task completes, the Promise will move into one of two permanent states — if the task completed successfully, the Promise becomes _resolved_, and if it failed, the Promise becomes _rejected_.
 
 In other words, **all Promises start as _unresolved_, and then become either _resolved_ or _rejected_**.
 
-You don’t read values directly from Promises. Instead, you attach callbacks to them using their `.then()` function. If a Promise is unresolved when you call `.then()` then the callback is queued for execution when the Promise resolves or rejects. But, if the Promise is already resolved or rejected, then the callback gets executed immediately.
+You don’t read values directly from Promises. Instead, you attach callbacks to them using their `.then()` function. If a Promise is unresolved when you call `.then()`, then the callback is queued for execution when the Promise resolves or rejects. But, if the Promise is already resolved or rejected, then the callback gets executed immediately.
 
 ### The `.then()` Function
 
@@ -251,11 +251,11 @@ More importantly, note that **we are ignoring the value returned by the `$.ajax(
 
 We’ll now transform the above example to an equivalent example that uses Promises.
 
-The first and most important thing to note is that the $.ajax() function does return a value, specifically, it returns a [`jqXHR` object](http://api.jquery.com/jQuery.ajax/#jqXHR).
+The first and most important thing to note is that the $.ajax() function does return a value; specifically, it returns a [`jqXHR` object](http://api.jquery.com/jQuery.ajax/#jqXHR).
 
 As we discussed in the previous episode, `jqXHR` objects are jQuery’s way of representing an AJAX request and response. These objects try to be everything to everyone. They are a super-set of an impressive array of things. Last time we learned that jqXHR objects offer all the same properties and functions as the underlying core JavaScript XHR objects that are actually used by browsers to make AJAX requests.
 
-This time the important thing to know is that **`jqXHR` objects are also _thenables_, so we can use them as JavaScript Promises**.
+This time the important thing to know is that **`jqXHR` objects are also _thenables_; so we can use them as JavaScript Promises**.
 
 As mentioned before, what makes a Promise a Promise is the fact that it provides a `.then()` function (hence the name _thenable_).
 
@@ -275,15 +275,15 @@ Note that this time, there is no `success` callback (nor are there `error` or `c
 
 Much more importantly, note that this time, we have not ignored the value returned by the `$.ajax()` function; we have saved it into the variable `corpPromise`.
 
-The Promise we have stored in corpPromise now represents the anticipated result of the AJAX request. At the instance the Promise was created, it was effectively an IOU for the data, i.e. it was an unresolved Promise. At some later time the web server responded to the AJAX request and the Promise either resolved to the value returned by the web server or rejected.
+The Promise we have stored in `corpPromise` now represents the anticipated result of the AJAX request. At the instance the Promise was created, it was effectively an IOU for the data, i.e. it was an unresolved Promise. At some later time the web server responded to the AJAX request and the Promise either resolved to the value returned by the web server or rejected.
 
 Remember that AJAX queries are asynchronous; so we can’t know when the Promise will resolve or reject.
 
-So, how do we get at the value returned by the server? Or how do we deal with an AJAX error?
+So, how do we get at the value returned by the server? And how do we deal with an AJAX error?
 
 The answer to both questions is the same — we use `.then()` to tell the Promise what we’d like to do with the data or the error.
 
-**The `.then()` function takes two arguments, a callback to execute when the Promise has successfully resolved and a callback to execute when the Promise has rejected.** Both arguments are optional, and you can use null as a placeholder if you only want to specify what to do in the case of a rejected Promise.
+**The `.then()` function takes two arguments, a callback to execute when the Promise has successfully resolved and a callback to execute when the Promise has rejected.** Both arguments are optional, and you can use `null` as a placeholder if you only want to specify what to do in the case of a rejected Promise.
 
 At the point in time we call the `.then()` function, exactly one of the following will be true, and the function will act accordingly:
 
@@ -349,7 +349,7 @@ We can now see the rejected callback in action by calling `.then()` on our faile
 failedPromise.then(RESOLVED_CB, REJECTED_CB);
 ```
 
-If we only care about rejection, and not success we can use `null` as the resolved callback:
+If we only care about rejection, and not success, we can use `null` as the resolved callback:
 
 ```javascript
 corpPromise.then(null, REJECTED_CB);
