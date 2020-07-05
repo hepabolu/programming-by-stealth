@@ -161,7 +161,7 @@ Finally, we are calling the `httpEcho` URL for the plain-text version of the out
 
 When we run the command we get a lot of output!
 
-```shell
+```console
 * Server certificate: TEST CODE remove after testing
 *  subject: CN=bartbusschots.ie
 *  start date: Mar  5 08:15:48 2019 GMT
