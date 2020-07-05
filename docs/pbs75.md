@@ -161,28 +161,7 @@ Finally, we are calling the `httpEcho` URL for the plain-text version of the out
 
 When we run the command we get a lot of output!
 
-
 <pre>
-* Server certificate: TEST CODE remove after testing
-*  subject: CN=bartbusschots.ie
-*  start date: Mar  5 08:15:48 2019 GMT
-*  expire date: Jun  3 08:15:48 2019 GMT
-*  subjectAltName: host "www.bartbusschots.ie" matched cert&apos;s "www.bartbusschots.ie"
-*  issuer: C=US; O=Let's Encrypt; CN=Let's Encrypt Authority X3
-*  SSL certificate verify ok.
-> POST /utils/httpEcho/text?p1=param1Val&p2=param2Val HTTP/1.1
-> Host: www.bartbusschots.ie
-> User-Agent: curl/7.54.0
-> # Server
-- IP:Port:      37.139.7.12:443
-- Name:         bartbusschots.ie
-- Software:     nginx/1.12.2
-- CGI Revision: CGI/1.1
-* Connection #0 to host www.bartbusschots.ie left intact
-</pre>
-
-real stuff follows:
-```shell
 bart-imac2018:~ bart$ curl -v --data-urlencode d1=val1 --data-urlencode d2=val2 --cookie 'c1=cookie; c2=monster' https://www.bartbusschots.ie/utils/httpEcho/text?p1=param1Val\&p2=param2Val
 *   Trying 37.139.7.12...
 * TCP_NODELAY set
@@ -261,7 +240,7 @@ bart-imac2018:~ bart$ curl -v --data-urlencode d1=val1 --data-urlencode d2=val2 
 - Software:     nginx/1.12.2
 - CGI Revision: CGI/1.1
 * Connection #0 to host www.bartbusschots.ie left intact
-```
+</pre>
 
 Again, let’s break it down.
 
