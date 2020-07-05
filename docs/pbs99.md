@@ -10,18 +10,18 @@ The previous instalment was built around a worked example, this one will be the 
 
 This instalment uses 3 example files:
 
-* [Download ZIP File]()
+* [Download ZIP File](https://rawcdn.githack.com/bartificer/programming-by-stealth/079bad43f4040990b60cb15b5f6bc4e2b9f80401/instalmentZips/pbs99.zip)
 * [View source code online at GitHub](https://github.com/bartificer/programming-by-stealth/tree/master/instalmentResources/pbs99)
 * View the HTML file in your browser:
-	* [`pbs99.html`]()
+	* [`pbs99.html`](https://rawcdn.githack.com/bartificer/programming-by-stealth/079bad43f4040990b60cb15b5f6bc4e2b9f80401/instalmentResources/pbs99/pbs99.html)
 
 ## Matching Podcast Episode
 
-Listen along to this instalment on [episode ?? of the Chit Chat Across the Pond Podcast]().
+Listen along to this instalment on [episode 643 of the Chit Chat Across the Pond Podcast]().
 
-<audio controls src="?autoplay=0&loop=0&controls=1">Your browser does not support HTML 5 audio 🙁</audio>
+<audio controls src="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2020_06_28.mp3?autoplay=0&loop=0&controls=1">Your browser does not support HTML 5 audio 🙁</audio>
 
-You can also <a href="" >Download the MP3</a>
+You can also <a href="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2020_06_28.mp3" >Download the MP3</a>
 
 ## Class Inheritance
 
@@ -142,7 +142,7 @@ As a quick reminder, we chose to model monetary amounts using three interrelated
 
 There were two *has-a* relationships between those classes — monetary amounts had a currency, and currencies had one or two denominations.
 
-Our `Currency` class from the previous instalment cannot be used to represent currencies with more than two denominations. If you're a Harry Potter fan and want to implement Wizarding Money, you're out of luck because J.K. Rowling's wizards use Gallions, which divide into Sickles, which divide into Knuts. Similarly, Star Trek fans know the Ferengi use Gold-Pressed Latinum as their currency, and it consists of Bars, which divide into Strips, which divide into Slips.
+Our `Currency` class from the previous instalment cannot be used to represent currencies with more than two denominations. If you're a Harry Potter fan and want to implement Wizarding Money, you're out of luck because J.K. Rowling's wizards use Galleons, which divide into Sickles, which divide into Knuts. Similarly, Star Trek fans know the Ferengi use Gold-Pressed Latinum as their currency, and it consists of Bars, which divide into Strips, which divide into Slips.
 
 What we need is another class to represent this other type of currency, but that class would share a lot of code with our existing class.
 
