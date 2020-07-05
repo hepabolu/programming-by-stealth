@@ -161,7 +161,8 @@ Finally, we are calling the `httpEcho` URL for the plain-text version of the out
 
 When we run the command we get a lot of output!
 
-```console
+
+<pre>
 * Server certificate: TEST CODE remove after testing
 *  subject: CN=bartbusschots.ie
 *  start date: Mar  5 08:15:48 2019 GMT
@@ -178,7 +179,7 @@ When we run the command we get a lot of output!
 - Software:     nginx/1.12.2
 - CGI Revision: CGI/1.1
 * Connection #0 to host www.bartbusschots.ie left intact
-```
+</pre>
 
 real stuff follows:
 ```shell
