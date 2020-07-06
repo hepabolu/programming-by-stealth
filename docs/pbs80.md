@@ -4,7 +4,7 @@ In the previous instalment we got our first introduction to the concept of _Prom
 
 You can [download this instalment’s ZIP file here](https://www.bartbusschots.ie/s/wp-content/uploads/2019/06/pbs80.zip) or [here on GitHub](https://cdn.jsdelivr.net/gh/bbusschots/pbs-resources/instalmentZips/pbs80.zip).
 
-# Matching Podcast Episode 597
+## Matching Podcast Episode 597
 
 Listen along to this instalment on [episode 597 of the Chit Chat Across the Pond Podcast](https://www.podfeet.com/blog/2019/07/ccatp-602/)
 
