@@ -6,7 +6,7 @@ You can [download this instalment’s ZIP file here](https://www.bartbusschots.i
 
 ## Matching Podcast Episode 597
 
-Listen along to this instalment on [episode 597 of the Chit Chat Across the Pond Podcast](https://www.podfeet.com/blog/2019/07/ccatp-602/)
+Listen along to this instalment on [episode 597 of the Chit Chat Across the Pond Podcast](https://www.podfeet.com/blog/2019/06/ccatp-597/)
 
 <audio controls src="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2019_06_14.mp3">Your browser does not support HTML 5 audio 🙁</audio>
 
@@ -247,7 +247,7 @@ aPromise.then(
 );
 ```
 
-In situations where you want to do the same thing no matter what when wrong, regardless of where in the chain the rejection occurred, you should add a final `.catch()` to the end of the chain and use that to deal with the rejection. That is, you should do something like:
+In situations where you want to do the same thing no matter what went wrong, regardless of where in the chain the rejection occurred, you should add a final `.catch()` to the end of the chain and use that to deal with the rejection. That is, you should do something like:
 
 ```javascript
 aPromise.then(
@@ -337,16 +337,16 @@ Maynooth: 🌦 +11°C
 
 ```
 
-By default the API will use Celsius for all locals other than `en-US`. However, if your browser isn’t configured to use US English and you absolutely must know how cold it is in June in Ireland in Fahrenheit, you can add an HTTP request parameter with the name `u` (for _USA_) and no value, i.e. `http://wttr.in/Maynooth?format=3&u`:
+By default the API will use Celsius for all locales other than `en-US`. However, if your browser isn’t configured to use US English and you absolutely must know how cold it is in June in Ireland in Fahrenheit, you can add an HTTP request parameter with the name `u` (for _USA_) and no value, i.e. `http://wttr.in/Maynooth?format=3&u`:
 
 ```
 Maynooth: 🌦 +52°F
 
 ```
 
-While this wonderful free API works great directly in a browser, via a command line HTTP client like curl, or even via an HTTP API from within an app, it does not work via AJAX because the server does not set the appropriate HTTP headers to permit cross-origin AJAX calls.
+While this wonderful free API works great directly in a browser, via a command line HTTP client like `curl`, or even via an HTTP API from within an app, it does not work via AJAX because the server does not set the appropriate HTTP headers to permit cross-origin AJAX calls.
 
-To work around this limitation, I’ve written a very simple PHP proxy script which can be used to access the API from the same origin as `pbs80a.html`. This script is named `wttr.in.proxy.php`, and it accepts two query parameters — city to pass the city you would like the weather for, and units to specify the desired temperature units. To get Fahrenheit use `units=f`. In all other situations the proxy script defaults to Celsius.
+To work around this limitation, I’ve written a very simple PHP proxy script which can be used to access the API from the same origin as `pbs80a.html`. This script is named `wttr.in.proxy.php`, and it accepts two query parameters — the city you would like the weather for, and units to specify the desired temperature units. To get Fahrenheit use `units=f`. In all other situations the proxy script defaults to Celsius.
 
 **For this proxy script to work, you’ll need to access `php80a.html` via a web server that supports PHP, like MAMP.**
 
@@ -355,7 +355,7 @@ To work around this limitation, I’ve written a very simple PHP proxy script wh
 
 In case you’re curious and you’d like to see another language in action, this is the code for the proxy script:
 
-```php
+<code>
 <?php
 # Set the MIME-Type to text/plain
 header('Content-Type: text/plain');
@@ -366,8 +366,9 @@ $url .= $_REQUEST['units'] == 'f' ? '&u' : '&c';
 
 # fetch and output the URL
 echo file_get_contents($url);
-```
-Apart from the fact that comments start with <code>#</code> instead of <code>//</code>, that strings are concatenated with <code>.</code> instead of <code>+</code>, and that variable names all start with a <code>\$</code>, the code actually looks very similar to JavaScript. That’s because both PHP and JavaScript are very heavily inspired by the venerable [C programming language](<https://en.wikipedia.org/wiki/C_(programming_language)>).
+</code>
+
+Apart from the fact that comments start with <code>#</code> instead of <code>//</code>, that strings are concatenated with <code>.</code> instead of <code>+</code>, and that variable names all start with a <code>\$</code>, the code actually looks very similar to JavaScript. That’s because both PHP and JavaScript are very heavily inspired by the venerable <a href="https://en.wikipedia.org/wiki/C_(programming_language)" >C programming language</a>
 </blockquote>
 
 
