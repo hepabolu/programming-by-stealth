@@ -111,7 +111,7 @@ It is possible to prevent some of these behaviours, but we’re not going to cov
 
 ## Triggering Modals with JavaScript
 
-As we’ve seen, you can trigger a modal without having to write any JavaScript using Bootstrap’s Toggle plugin, but that’s not the most common use case for Modals. Instead, Modals are usually triggered via an event handler.
+As we’ve seen, you can trigger a modal without having to write any JavaScript using Bootstrap’s Toggle plugin, but that’s not the most common use-case for Modals. Instead, Modals are usually triggered via an event handler.
 
 As with other Bootstrap components, the Bootstrap JavaScript contains a jQuery plugin for controlling Modals. This plugin has the same name as the component, i.e. modal, and provides two particularly important actions, `show`, and `hide`. As with all jQuery plugins, you invoke the Bootstrap Modal jQuery plugin by calling the function with the plugins name on a jQuery object and passing the action as a string as the first argument.
 
