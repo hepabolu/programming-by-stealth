@@ -163,13 +163,15 @@ There are not many of these functions, but they’re extremely useful, particula
 
 There are times when it’s convenient to instantly create a resolved or rejected promise for a given piece of data or error. Perhaps an API requires a promise as an argument, and you already have the data you need to promise, or perhaps you want to start a promise chain with a default state. The `Promise` class provides the two functions we need to achieve this:
 
-`Promise.resolved(val)`
+<dl>
+<dt><code>Promise.resolved(val)</code></dt>
 
-This function returns a native JavaScript promise that has resolved to `val` (i.e. to whatever was passed as the first argument). For example, `Promise.resolved('boogers')` will return a `Promise` that has already resolved to the string `'boogers'`.
+<dd>This function returns a native JavaScript promise that has resolved to <code>val</code> (i.e. to whatever was passed as the first argument). For example, <code>Promise.resolved('boogers')</code> will return a <code>Promise</code> that has already resolved to the string <code>'boogers'</code>.</dd>
 
-`Promise.rejected(err)`
+<dt><code>Promise.rejected(err)</code></dt>
 
-This function returns a native JavaScript promise that has rejected with the error `err` (i.e. whatever was passed as the first argument).
+<dd>This function returns a native JavaScript promise that has rejected with the error <code>err</code> (i.e. whatever was passed as the first argument).</dd>
+</dl>
 
 ## Controlling Parallelisation
 
@@ -185,7 +187,7 @@ Before going any further, it’s important to remind ourselves that the only rea
 
 By default, this is how promises behave.
 
-We can see this behaviour in action with Demo 1 in `pbs81a.html`. The click handler for that button (shown below) starts three unrelated promises one after the other. You’ll see all three log that they are starting. Then each will resolve or reject randomly in a random amount of seconds.
+We can see this behaviour in action with Demo 1 in `pbs81a.html`. The click handler for that button (shown below) starts three unrelated promises, one after the other. You’ll see all three log that they are starting. Then each will resolve or reject randomly in a random amount of seconds.
 
 ```javascript
 $('#demo1_btn').click(function(){
@@ -208,7 +210,7 @@ $('#demo1_btn').click(function(){
 
 Sometimes the input to one task depends on the output from another. In this situation we have no choice but to perform those tasks one after the other, i.e. in series. As we learned in [the previous instalment](https://pbs.bartificer.net/pbs80), promise chains allow us to do this.
 
-We can see this behaviour in action with Demo 2 in `pbs81a.html`. The click handler for this button (code below) starts three chained promises where the resolution of the first triggers the start of the second, and the resolution of the second the start of the third.
+We can see this behaviour in action with Demo 2 in `pbs81a.html`. The click handler for this button (code below) starts three chained promises where the resolution of the first triggers the start of the second, and the resolution of the second triggers the start of the third.
 
 ```javascript
 $('#demo2_btn').click(function(){
