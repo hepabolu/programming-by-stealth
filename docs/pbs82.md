@@ -149,7 +149,7 @@ This is why non-blocking I/O was incorporated into the JavaScript language by ma
 
 This asynchronous approach is non-blocking because the second line is not blocked from executing by the first. There is no waiting around, execution continues!
 
-The asynchronous paradigm has the obvious advantage of being more efficient — doing many things at the same times definitely makes pages load faster! But, this efficiency comes at a price!
+The asynchronous paradigm has the obvious advantage of being more efficient — doing many things at the same time definitely makes pages load faster! But, this efficiency comes at a price!
 
 When you’re programming asynchronously, you have no guarantee of the order in which things happen, and you have no way of knowing when an operation will complete. In our above example, the 4th line of code can’t run until the operation initiated by the first completes. How can we ensure that in an asynchronous world? JavaScript’s answer to this was callbacks — i.e. asynchronous functions take a reference to a function as an argument, and they execute that function when the operation completes. If the operation produces output, that output gets passed to the callback when it’s executed.
 
