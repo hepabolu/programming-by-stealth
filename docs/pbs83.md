@@ -281,7 +281,7 @@ Since a Card can have either a header, or an image cap on top, and either a foot
     <h4 class="card-subtitle h6 text-muted">A Card Subtitle</h4>
 
     <!-- Some regular Card text -->
-    <p class="card-text">This is some card text. It&amp;s really not very exiting in any way.</p>
+    <p class="card-text">This is some card text. It's really not very exiting in any way.</p>
 
     <!-- A Card link -->
     <a href="" class="card-link">A Card Link</a>
@@ -321,7 +321,7 @@ Card Groups and Card Decks are extremely similar — both will ensure that the h
 
 The only noticeable difference is that, in a Card Group, the Cards touch each other like buttons in a [Button Group](https://getbootstrap.com/docs/4.3/components/button-group/), but in a deck, each Card is separate and there is some empty space between the Cards.
 
-Let’s start with a sample card group consisting of three cards representing some podcasts you might have heard of 😉. You’ll find the full code in the file pbs83a.html in the ZIP file, but the snippet below shows the overall structure of the Card Group:
+Let’s start with a sample card group consisting of three cards representing some podcasts you might have heard of 😉. You’ll find the full code in the file `pbs83a.html` in the ZIP file, but the snippet below shows the overall structure of the Card Group:
 
 ```html
 <div class="card-group">
