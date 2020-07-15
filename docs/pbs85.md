@@ -28,7 +28,7 @@ Before we get specific and limit our attention to JavaScript arrays, let’s rem
 
 1.  The entries in an array are ordered and numbered, and usually indexed from 0 rather than from 1. That is, the first element in an array is generally referred to as _element zero_, the second as _element one_, and so on.
 2.  Arrays can contain empty slots in the list. That is, it’s OK to have values at positions 0 and 2, but not at position 1.
-3.  Arrays have a length, and its usually defined as the number of positions from the start of the array to the highest populated position. So, an array with only a single value at position 9 will have a length of 10 (remember that pesky zero index!).
+3.  Arrays have a length. It's usually defined as the number of positions from the start of the array to the highest populated position. So, an array with only a single value at position 9 will have a length of 10 (remember that pesky zero index!).
 
 ### JavaScript Arrays
 
@@ -65,7 +65,7 @@ console.log(myArray[1]); // outputs 'TWO!!'
 
 ### Standard Array Functions
 
-Because JavaScript arrays are all instances of the built-in `Array` class, they all have the instance functions that class’s prototype defines. You can find the full list on [MDN’s documentation of the Array class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype), but below are some common examples we’ve seen before in this series.
+Because JavaScript arrays are all instances of the built-in `Array` class, they all have the instance functions that class’s prototype defines. You can find the full list on [MDN’s documentation of the Array class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), but below are some common examples we’ve seen before in this series.
 
 Note that these examples are intended to be run from the JavaScript console on the file `pbs85a.html` from this instalment’s zip file. The examples make use of an array named `days` defined within that file's global scope as follows:
 
@@ -170,7 +170,7 @@ console.log(deepArray); // [[3, 2, 1], [4, 5, 6], [7, 8, 9]] !!!
 
 Again, the examples below will work with the `days` array defined in the file `pbs85a.html` from this instalment’s ZIP file.
 
-One of the most common things to want to do with an array is loop over it. We’ve seen quite a few ways of doing that through out this series, but there are two particularly common approaches you’ll see used in sample code etc.
+One of the most common things to want to do with an array is loop over it. We’ve seen quite a few ways of doing that through out this series, but there are two particularly common approaches you’ll see used in sample code, etc.
 
 Firstly, there’s the traditional way of looping over an array with a basic `for` loop:
 
@@ -280,7 +280,7 @@ I chose to use the Bootstrap grid to lay out my cards so they could be responsiv
 
 To facilitate the display of the currency data, I built a dictionary named `CURRENCIES` defining the english names, symbols, and icons for each supported currency. The dictionary is indexed by three-letter ISO 4217 currency codes. Rather than hard-coding the currencies to display, I chose to define them in globally scoped variables named `DEFAULT_CURRENCIES` (the currencies for my 3 cards), and `DISPLAY_CURRENCIES` (the currencies to display within each card). Both of these variables are arrays of ISO 4217 currency codes.
 
-To generate the HTML for each card, I chose to write a stand-alone asynchronous function named `buildCurrencyCard()`. The function takes an ISO 4217 code as its only argument, and returns an HTML string. The function uses AJAX to fetch the exchange rates, combines those downloaded rates with information from the currencies dictionary to build a view object, and then generates the HTML using the embedded Mustache template.
+To generate the HTML for each card, I chose to write a stand-alone asynchronous function named `buildCurrencyCard()`. The function takes an ISO 4217 code as its only argument, and returns an HTML string. The function uses AJAX to fetch the exchange rates, combines those downloaded rates with information from the `CURRENCIES` dictionary to build a view object, and then generates the HTML using the embedded Mustache template.
 
 Finally, the document ready handler loops over the currencies defined in the `DEFAULT_CURRENCIES`, calls `buildCurrencyCard()` with each to build an array of promises, and then uses `Promise.all()` to create a single promise for all three HTML snippets. When the promise resolves, the three snippets are added into the document.
 
@@ -310,7 +310,7 @@ The first thing I want to highlight is the template’s use of a Mustache sectio
 
 For more on loops within Mustache templates, [see Instalment 73](https://pbs.bartificer.net/pbs73).
 
-By using named mustaches the template in effect defines the structure of the expected view. In this case the template expects just two top-level keys, `base` and `rates`. `base` should be a dictionary defining at least `base.code`, `base.name`, `base.icon`, and `base.symbol`. Because it will be used to loop over a section, `rates` must be an array of dictionaries. Each of those dictionaries must defined at least `code`, `name`, `rate`, and `symbol`.
+By using named mustaches the template in effect defines the structure of the expected view. In this case the template expects just two top-level keys, `base` and `rates`. `base` should be a dictionary defining at least `base.code`, `base.name`, `base.icon`, and `base.symbol`. Because it will be used to loop over a section, `rates` must be an array of dictionaries. Each of those dictionaries must define at least `code`, `name`, `rate`, and `symbol`.
 
 I’d like to draw your attention to the fact that all the needed information exists, but not in one place, and not in the required format. The rates come from the exchange rates API, and the rest from the `CURRENCIES` dictionary. Between fetching the exchange rates via AJAX and rendering the card template with Mustache, the `buildCurrencyCard()` function has to generate a view object of the above form. I’ve highlighted the section of the function that does that work below:
 
