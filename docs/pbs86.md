@@ -32,7 +32,7 @@ While it is important to know that functions are objects and can be treated like
 
 ## 3 Syntaxes for Defining JavaScript Functions (Redux)
 
-It often comes as a surprise to novice JavaScript programmers that there is no single way of defining a function. Throughout this series we’ve seen the three commonly used syntaxes for defining functions. I want to revisit them as a group so as to point out how they’re similar, and more importantly, how they differ from each other. For completeness I should also mention that a 4th method of creating functions does exist, but it’s more theoretical than practical. I’ve never seen it used anywhere but in the documentation! If you’re curious, I’m referring to the [Function constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function). We’ve ignored it so far in this series, and I’m going to continue to do so 🙂
+It often comes as a surprise to novice JavaScript programmers that there is no single way of defining a function. Throughout this series we’ve met the three commonly used syntaxes for defining functions. I want to revisit them as a group so as to point out how they’re similar, and more importantly, how they differ from each other. For completeness I should also mention that a 4th method of creating functions does exist, but it’s more theoretical than practical. I’ve never seen it used anywhere but in the documentation! If you’re curious, I’m referring to the [Function constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function). We’ve ignored it so far in this series, and I’m going to continue to do so 🙂
 
 Before we go any further, just a quick note on the example code snippets. These can be run in the JavaScript console on any page, but have been tested in the console on the file `pbs86a.html` in this instalment’s ZIP. Note that, for clarity, the examples have all been simplified to omit the argument checking you should carry out when writing production code.
 
@@ -84,7 +84,7 @@ function hoistDemo(){
 hoistDemo();
 ```
 
-When you run the above code, the `hoistDemo()` function will be called, creating a new scope. Inside that scope the first line of code (ignoring comments) calls a function named `hoistedFunction()`. The second line of actual code declares that function. You might imagine that means the first line will fail. But, when you run the entire code snippet in a JavaScript console you’ll see that it doesn’t throw an error, and, that the string `'I exist already!'` will get logged. How? Hoisting!
+When you run the above code, the `hoistDemo()` function will be called, creating a new scope. Inside that scope the first line of code (ignoring comments) calls a function named `hoistedFunction()`. The second line of actual code declares that function. You might imagine that means the first line will fail. But, when you run the entire code snippet in a JavaScript console, you’ll see that it doesn’t throw an error and that the string `'I exist already!'` will get logged. How? Hoisting!
 
 Under the hood, the JavaScript interpreter reordered the contents of the function `hoistDemo()` so that all function declarations are at the top. The code is, in effect, silently transformed into the following:
 
@@ -99,7 +99,7 @@ function hoistDemo(){
 
 ### Function Expressions/Literals
 
-A [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function), also known as a _function literal_ is a syntax for defining a function without giving it a name. Function expressions/literals can be used anywhere a JavaScript value can be used. Because they don’t inherently have a name, they’re often referred to as _anonymous functions_. Note that you can assign a function literal/expression to a variable name. So you can name an anonymous function if you like!
+A [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function), also known as a _function literal_, is a syntax for defining a function without giving it a name. Function expressions/literals can be used anywhere a JavaScript value can be used. Because they don’t inherently have a name, they’re often referred to as _anonymous functions_. Note that you can assign a function literal/expression to a variable name. So you can name an anonymous function if you like!
 
 The syntax is simply:
 
@@ -145,7 +145,7 @@ When you try run the above snippet you’ll get a reference error because, withi
 
 ### (Fat) Arrow Functions
 
-ES6 introduced a new syntax for declaring functions that’s shorter to write, but mostly similar in effect to function expressions/literals. So-called [fat arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), or _arrow function expressions_ can be used anywhere a JavaScript value can be used. Note that, like function expressions, **fat arrow functions are not hoisted**.
+ES6 introduced a new syntax for declaring functions that’s shorter to write, but mostly similar in effect to function expressions/literals. So-called [fat arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), or _arrow function expressions_, can be used anywhere a JavaScript value can be used. Note that, like function expressions, **fat arrow functions are not hoisted**.
 
 Ignoring the visual differences for now, the big differentiation between arrow functions and regular functions is that arrow functions do not get their own `this` variable. Instead, they inherit their `this` from their containing scope. (More on the often confusing `this` keyword in the upcoming instalment on objects as prototype/class instances.)
 
