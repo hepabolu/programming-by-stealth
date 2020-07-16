@@ -75,7 +75,7 @@ While you can use `.next()` in a `while` loop to iterate over an iterable, in re
 
 Let’s take a moment to look at `for...of` iterating over things other than arrays.
 
-Firstly, we can use `for...of` to iterate over the special arguments variable that exists within all functions:
+Firstly, we can use `for...of` to iterate over the special `arguments` variable that exists within all functions:
 
 ```javascript
 // define a function that iterates over it arguments
@@ -270,7 +270,7 @@ While infinite series make no sense in a `for...of` loop, they can be very usefu
 
 To illustrate this point, let’s look at a more real world random number generator. Again, this function is defined in `pbs87a.html`, but included below for convenience.
 
-This better random number generator will be able to provider either a finite or infinite number of random numbers, depending on how it’s called. If called with no arguments, it will produce an infinite stream. If called with a number as the first argument, it will produce that many random numbers.
+This better random number generator will be able to provide either a finite or infinite number of random numbers, depending on how it’s called. If called with no arguments, it will produce an infinite stream. If called with a number as the first argument, it will produce that many random numbers.
 
 ```javascript
 // better random number generator
@@ -643,7 +643,7 @@ $('.fib_val.fib_val_current', $fibOut)
   .unwrap();
 ```
 
-The difference between the highlighted current value and the unhighlighted previous values is three-fold. Firstly, the current value has the class `badge-primary` while the previous values have `badge-secondary` instead. Secondly, the current value has the additional class `fib_val_current`. And finally, the current value is wrapped in a `<span>` with the class `h4` that the other value are not wrapped in.
+The difference between the highlighted current value and the unhighlighted previous values is three-fold. Firstly, the current value has the class `badge-primary` while the previous values have `badge-secondary` instead. Secondly, the current value has the additional class `fib_val_current`. And finally, the current value is wrapped in a `<span>` with the class `h4` that the other values are not wrapped in.
 
 Firstly, the `$()` function is passed a CSS selector that looks for any tag with both the classes `fib_val` and `fib_val_current`, and confines its search within the output area (stored in `$fibOut`).
 
