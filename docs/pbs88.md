@@ -337,7 +337,7 @@ In the sample solution, the Bootstrap grid column for each currency card is give
 ```html
 <div data-currency="{{{base.code}}}" class="currencyCol col-12 col-md-6 col-xl-4">
 ```
-<!-- {% raw %} -->
+<!-- {% endraw %} -->
 
 Similarly, the list item for each rate within each card is given the CSS class `.currencyRate` and a data attribute named `currency`:
 
@@ -345,7 +345,7 @@ Similarly, the list item for each rate within each card is given the CSS class `
 ```html
 <li class="list-group-item currencyRate" data-currency="{{{code}}}">
 ```
-<!-- {% raw %} -->
+<!-- {% endraw %} -->
 
 These data attributes make it possible to easily get references to the cards and rates for any currency via jQuery. You can see this in action via the JavaScript console.
 
