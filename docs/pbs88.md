@@ -4,9 +4,9 @@ We’re nearing the end of our series-within-a-series recapping the many proverb
 
 This instalment will have a slightly unusual structure. We’ll use my sample solution to the challenge set at the end of [instalment 85](https://bartificer.net/pbs85) to illustrate some of the core concepts.
 
-# #Matching Podcast Episode 619
+## Matching Podcast Episode 619
 
-Listen along to this instalment on [episode 619 of the Chit Chat Across the Pond Podcast](https://www.podfeet.com/blog/2019/11/ccatp-619)
+Listen along to this instalment on [episode 619 of the Chit Chat Across the Pond Podcast](https://www.podfeet.com/blog/2019/12/ccatp-619)
 
 <audio controls src="https://media.blubrry.com/nosillacast/traffic.libsyn.com/nosillacast/CCATP_2019_12_14.mp3">Your browser does not support HTML 5 audio 🙁</audio>
 
@@ -92,7 +92,7 @@ The first argument here is a CSS selector which simply matches all `<select>` el
 
 As well as searching the document based on CSS selectors, jQuery’s `.is()` function allows us to test if an element matches a given CSS selector.
 
-For example, within the function for updating the enabled/disabled state of the options within the select for adding new cards (`updateAddCardSelectOptions()`) my sample solution tests to see if the grid column for a given currency (`$curCol`) is visible or not using the simple test `$curCol.is(':hidden')`. This uses the CSS pseudo-class `:hidden` as the selector.
+For example, within the function for updating the enabled/disabled state of the options within the select for adding new cards (`updateAddCardSelectOptions()`), my sample solution tests to see if the grid column for a given currency (`$curCol`) is visible or not using the simple test `$curCol.is(':hidden')`. This uses the CSS pseudo-class `:hidden` as the selector.
 
 ### Altering Elements with jQuery
 
@@ -147,7 +147,7 @@ There are two common groups of metaphors used to describe the DOM and moving wit
 
 At the top level our document contains a header and the main content. The header contains just a heading, and the main content contains two sections. Each section contains a heading and some content. The first section has a paragraph and an unordered list with two list items, and the second has two paragraphs.
 
-The first groups of metaphors are directional. As you move from the `<body>` into the top-level elements and then into the elements within those elements you are said to be heading _down_ into the hierarchy. Moving in this direction will be described as heading _deeper_ into the DOM. Conversely, if you’re at one of the list items then moving to the list or the section or the main is described as moving _up_ the DOM. The section is _higher_ in the DOM than the list which is _higher_ than the list item.
+The first groups of metaphors are directional. As you move from the `<body>` into the top-level elements, and then into the elements within those elements, you are said to be heading _down_ into the hierarchy. Moving in this direction will be described as heading _deeper_ into the DOM. Conversely, if you’re at one of the list items, then moving to the list or the section or the main is described as moving _up_ the DOM. The section is _higher_ in the DOM than the list which is _higher_ than the list item.
 
 The second group of metaphors are familial. We can describe the unordered list as being the _parent_ of the list items. We can also reverse that and say that the list items are _children_ of the list. The two sections can be described as _siblings_ within the main, and the two list items as _siblings_ within the list. The metaphor can be stretched over multiple generations too — all elements nested within the first section are _descendants_ of that section, and all the containing elements between the list items and the `<body>` tag are _ancestors_ of the list items. Something to watch out for is that the plural _parents_ is often used as a synonym for _ancestors_. If you see _parent_ (singular) then it refers to the directly containing element, but if you see _parents_ (plural) it refers to **all** the containing elements. So, the parent of the list items is the list, but the parents are the list, the section, and the main.
 
