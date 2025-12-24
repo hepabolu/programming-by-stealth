@@ -1,14 +1,15 @@
 # Main site config
 remote_theme: bartificer/bartificer-jekyll-theme
+repository: hepabolu/programming-by-stealth
 plugins:
   - jekyll-remote-theme
 title: Programming by Stealth
 email: podcasting@bartificer.net
 description: >- # fold new lines and chomp
   A blog and podcast series by Bart Busschots & Allison Sheridan.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  bartificer
+baseurl: "/programming-by-stealth" # the subpath of your site, e.g. /blog
+url: "https://hepabolu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  hepabolu
 
 # theme-specific options
 accent:
